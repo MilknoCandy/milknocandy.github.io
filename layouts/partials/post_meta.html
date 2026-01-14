@@ -1,6 +1,7 @@
 {{- $scratch := newScratch }}
 
 {{- if not .Date.IsZero -}}
+{{/* Display the post date if it is set */}}
 {{- $scratch.Add "meta" (slice (printf "<span title='%s'>Date: %s</span>" (.Date) (.Date | time.Format (default
 ":date_long"
 site.Params.DateFormat)))) }}
@@ -21,6 +22,13 @@ default (printf "%d min"
 {{- with (partial "author.html" .) }}
 {{- $scratch.Add "meta" (slice (printf "<span>Author: %s</span>" .)) }}
 {{- end }}
+{{- end }}
+
+{{/* Display the last modified date if it is set */}}
+{{- if and (not .Lastmod.IsZero) (ne .Date.Unix .Lastmod.Unix) -}}
+{{- $scratch.Add "meta" (slice (printf "<span title='%s'>Last Modified: %s</span>" (.Lastmod) (.Lastmod | time.Format
+(default
+":date_long" site.Params.DateFormat)))) }}
 {{- end }}
 
 {{- with ($scratch.Get "meta") }}

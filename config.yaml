@@ -81,8 +81,8 @@ params:
   socialIcons:
     # - name: x
     #   url: "https://x.com/"
-    # - name: stackoverflow
-    #   url: "https://stackoverflow.com"
+    - name: email
+      url: "mailto:milknocandy@outlook.com"
     - name: github
       url: "https://github.com/milknocandy"
 
@@ -154,3 +154,8 @@ outputs:
     - HTML
     - RSS
     - JSON  # is necessary for search page to work
+
+frontmatter:
+  # 1. find by "lastmod" key in frontmatter
+  # 2. if not found, find by ":fileModTime" (file modification time)
+  lastmod: ["lastmod", ":fileModTime"]

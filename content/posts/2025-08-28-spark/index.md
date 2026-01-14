@@ -1,5 +1,6 @@
 ---
 date: '2025-08-28T20:47:43+08:00'
+# lastmod: '2025-08-28T20:47:43+08:00'
 draft: false
 title: '​Designing Bert for Convolutional Networks'
 # weight: 1
@@ -18,7 +19,7 @@ disableShare: false
 disableHLJS: false
 hideSummary: false
 searchHidden: false
-ShowReadingTime: true
+ShowReadingTime: false
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
 ShowWordCount: true
