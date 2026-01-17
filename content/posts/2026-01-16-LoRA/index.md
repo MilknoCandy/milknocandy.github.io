@@ -43,43 +43,43 @@ editPost:
 
 + ### 2023
 
-📖【_**EMNLP 2023 - Main**_】- Sparse Low-rank Adaptation of Pre-trained Language Models（Tsinghua University, The University of Chicago）
+📖【_**EMNLP 2023 - Main**_】- Sparse Low-rank Adaptation of Pre-trained Language Models (*Tsinghua University, The University of Chicago*)
 
-> **Subject:** Adaptive Rank Selection
->
-> + **Problem:** Standard LoRA uses a fixed, inflexible rank (hyperparameter $ r
+{{< box default >}}
+**Subject:** Adaptive Rank Selection
+
++ **Problem:** Standard LoRA uses a fixed, inflexible rank (hyperparameter $ r
  $), requiring expensive manual tuning.
-> + **Core Idea:** Make the rank learnable rather than fixed.
-> + **Mechanism:**
->     - **Gating:** Introduces an optimizable gating unit to the low-rank matrices.
->     - **Optimization:** Uses proximal gradient methods to update the gates.
->     - **Dynamics:** Prunes less important ranks during training automatically.
-> + **Result:** Eliminates discrete rank search; the model discovers its own optimal rank structure.
->
++ **Core Idea:** Make the rank learnable rather than fixed.
++ **Mechanism:**
+    - **Gating:** Introduces an optimizable gating unit to the low-rank matrices.
+    - **Optimization:** Uses proximal gradient methods to update the gates.
+    - **Dynamics:** Prunes less important ranks during training automatically.
++ **Result:** Eliminates discrete rank search; the model discovers its own optimal rank structure.
+{{< /box >}}
 
-<!-- 这是一张图片，ocr 内容为： -->
 ![SoRA](1-sora.png)
 
 + ### 2024
 
-🍰【_**Arxiv 2024**_】- <font style="color:rgb(31, 35, 40);">MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA-based Mixture of Experts</font>（四川大学、新加坡南阳理工）
+🍰【_**Arxiv 2024**_】- MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA-based Mixture of Experts (*Sichuan University, Purdue University, Emory University, Nanyang Technology University*)
 
-> 对多LoRA微调的一系列方法总结的非常好，仅记录，不分析。
->
+{{< box default >}}
+对多LoRA微调的一系列方法总结的非常好，仅记录，不分析。
+{{< /box >}}
 
-<!-- 这是一张图片，ocr 内容为： -->
 ![MixLoRA](2-mixlora.png)
 
 
 
 + ### 2025
 
-🍰<font style="color:rgb(0, 0, 0);">【</font>_**Arxiv 2025 May**_<font style="color:rgb(0, 0, 0);">】- ShareLoRA: Parameter Efficient and Robust Large Language Model Fine-tuning via Shared Low-Rank Adaptation（加利福尼亚大学）</font>
+🍰【_**Arxiv 2025**_】- ShareLoRA: Parameter Efficient and Robust Large Language Model Fine-tuning via Shared Low-Rank Adaptation (*University of California*)
 
-> <font style="color:rgb(0, 0, 0);">许多工作在致力于降低LoRA的可训练参数，但是显著地降低参数会导致收敛变慢，且不充分的缩减方式也会导致模型容易过拟合。并且，许多现有的PEFT方法在fine-tuning之后</font>**<u><font style="color:rgb(0, 0, 0);">难以维持跨不同域的鲁棒性</font></u>**<font style="color:rgb(0, 0, 0);">。</font>
->
-> + <font style="color:rgb(0, 0, 0);">作者发现：低秩矩阵A和B不需要在不同层被独特的配置，也可以实现最优的性能。</font>
-> + <font style="color:rgb(0, 0, 0);">作者方法：在所有层之间共享矩阵A或B，同时保持对应项（比如qkv）在每一层中不同即可。</font>
->
-> <font style="color:rgb(0, 0, 0);">探索了各种共享的策略，当然重要的发现是这样去共享也不会损失性能。</font>
->
+{{< box default >}}
+许多工作在致力于降低LoRA的可训练参数，但是显著地降低参数会导致收敛变慢，且不充分的缩减方式也会导致模型容易过拟合。并且，许多现有的PEFT方法在fine-tuning之后**难以维持跨不同域的鲁棒性**。
++ 作者发现：低秩矩阵A和B不需要在不同层被独特的配置，也可以实现最优的性能。
++ 作者方法：在所有层之间共享矩阵A或B，同时保持对应项（比如qkv）在每一层中不同即可。
+
+探索了各种共享的策略，当然重要的发现是这样去共享也不会损失性能。
+{{< /box >}}
