@@ -147,6 +147,12 @@ markup:
     # guessSyntax: true
     # lineNos: true
     # style: monokai
+  goldmark:
+    parser:
+      attribute: true
+  renderHooks:
+    image:
+      enableDefault: true
 
 # for Search Page
 outputs:

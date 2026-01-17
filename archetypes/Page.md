@@ -4,7 +4,7 @@ date: '{{ .Date }}'
 # weight: 1
 # aliases: ["/first"]
 tags: ["first"]
-author: "Me"
+author: "PaperMoon"
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: false
@@ -17,8 +17,8 @@ canonicalURL: "https://canonical.url/to/page"
 disableShare: false
 disableHLJS: false
 hideSummary: false
-searchHidden: true
-ShowReadingTime: true
+searchHidden: false
+ShowReadingTime: false
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
 ShowWordCount: true

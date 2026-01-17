@@ -1,0 +1,39 @@
+/* 1. 初始化计数器 */
+body {
+    counter-reset: sec-count;
+}
+
+/* 2. 章节计数：匹配 ## 标题 */
+.post-content h2 {
+    counter-increment: sec-count;
+    counter-reset: fig-count;
+}
+
+/* 3. 图片容器计数 */
+/* 仅当包含 figcaption 时才增加计数器，确保没名字的图不占用编号 */
+.post-content figure:has(figcaption) {
+    counter-increment: fig-count;
+}
+
+.post-content figure {
+    text-align: center;
+    margin: 30px auto;
+}
+
+/* 4. 图名样式：灰色、不加粗、自动编号 */
+.auto-fig-title {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    /* 稍微调小字号 */
+    color: #888;
+    /* 灰色显示 */
+    font-weight: normal;
+    /* 确保不加粗 */
+}
+
+.auto-fig-title::before {
+    /* 拼接 节-图 编号 */
+    content: "Fig. " counter(sec-count) "." counter(fig-count) ": ";
+}
