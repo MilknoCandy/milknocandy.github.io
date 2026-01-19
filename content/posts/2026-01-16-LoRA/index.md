@@ -1,6 +1,6 @@
 ---
 title: 'LoRA Variants Surveys'
-date: '2026-01-17T00:09:30+08:00'
+date: '2026-01-16T00:09:30+08:00'
 # weight: 1
 # aliases: ["/first"]
 tags: ["Flash Card", "LoRA Variants"]
@@ -43,7 +43,7 @@ editPost:
 
 + ### 2023
 
-📖【_**EMNLP 2023 - Main**_】- Sparse Low-rank Adaptation of Pre-trained Language Models (*Tsinghua University, The University of Chicago*)
+📝【_**EMNLP 2023 - Main**_】- Sparse Low-rank Adaptation of Pre-trained Language Models (*Tsinghua University, The University of Chicago*)
 
 {{< box default >}}
 **Subject:** Adaptive Rank Selection
@@ -65,21 +65,31 @@ editPost:
 🍰【_**Arxiv 2024**_】- MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA-based Mixture of Experts (*Sichuan University, Purdue University, Emory University, Nanyang Technology University*)
 
 {{< box default >}}
-对多LoRA微调的一系列方法总结的非常好，仅记录，不分析。
+A solid summary of various LoRA variants.
 {{< /box >}}
 
 ![MixLoRA](2-mixlora.png)
 
-
+📔【_**ICLR 2024**_】- Mixture of LoRA Experts (*Microsoft Research Asis, Tsinghua University*)
+{{< box default >}}
+**Subject:** Multiple LoRA Merging
++ **Problem:** Combining multiple LoRA adapters into a single model is challenging. Existing methods (e.g., linear interpolation or reference-tuning) either degrade the generation quality of pre-trained models or incur high training costs.
++ **Core Idea:** Adaptively combine multiple LoRA adapters at each layer by gate function.
++ **Method:** MoLE treats each trained layer of LoRA as an independent expert. It implements hierarchical weight control by embedding a learnable gating function in each layer, and dynamically learns the optimal combination weights by combining gating balance loss and domain-specific loss.
++ **Results:** More flexible merging method for multiple LoRAs with negligible costs.
+{{< /box >}}
+ 
+![Three LoRA composition strategies: (a) linear arithmetic, applying a single weight across all layers; (b) reference-tuning, retraining the large model with handcrafted masks that fuse multiple LoRA outputs; (c) MoLE, learning layer-wise distributions to set adaptive composition weights.](3-mole.png)
 
 + ### 2025
 
 🍰【_**Arxiv 2025**_】- ShareLoRA: Parameter Efficient and Robust Large Language Model Fine-tuning via Shared Low-Rank Adaptation (*University of California*)
 
 {{< box default >}}
-许多工作在致力于降低LoRA的可训练参数，但是显著地降低参数会导致收敛变慢，且不充分的缩减方式也会导致模型容易过拟合。并且，许多现有的PEFT方法在fine-tuning之后**难以维持跨不同域的鲁棒性**。
-+ 作者发现：低秩矩阵A和B不需要在不同层被独特的配置，也可以实现最优的性能。
-+ 作者方法：在所有层之间共享矩阵A或B，同时保持对应项（比如qkv）在每一层中不同即可。
-
-探索了各种共享的策略，当然重要的发现是这样去共享也不会损失性能。
+Numerous efforts are devoted to reducing the trainable parameters of LoRA, but a significant reduction in parameters will lead to slower convergence, and an inadequate reduction method will also make the model prone to over-fitting. **Moreover, many existing PEFT methods struggle to maintain cross-domain robustness after fine-tuning.**
++ **Observation:** LoRA's A and B do not need to be uniquely configured across different layers to achieve optimal performance
++ **Method:** Share matrix A or B across all layers while keeping the corresponding terms (e.g. qkv, out_proj) distinct in each layer.
+A variety of sharing strategies (share A, share B or share AB) are explored, with a key finding that such sharing does not compromise model performance.
 {{< /box >}}
+
+![ShareLoRA: three sharing strategies (left) and ShareA applied across self-attention layers (right)](4-sharelora.png)
