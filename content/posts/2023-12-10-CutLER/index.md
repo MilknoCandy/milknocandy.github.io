@@ -47,8 +47,6 @@ editPost:
 >
 > 项目主页：[https://kuis-ai.github.io/solv/](https://kuis-ai.github.io/solv/)
 >
-> 评价：well-written
->
 
 ## 介绍
 **背景**：<u>无监督多目标分割</u>借助自监督学习预训练中学习到的强力的语义信息展示了显著的效果。通常也是通过添加额外的模态（比如深度、动作）来增强视频序列的分割结果。然而，在 _合成序列 _中观察到的性能提升<u>依赖</u>于额外信息的鲁棒性，并不能转化为更具挑战的真实世界场景。
@@ -158,7 +156,6 @@ DINO展示了VIT在自监督学习中超强的性能。一些研究者<sup>[R7]<
 
 ![Observations from Deep Spectral Methods[R7]](4.png)
 
-<!-- 这是一张图片，ocr 内容为：COLOR AFFINITIES W MXN MXN KNN 1) SPECTRAL DECOMPOSITION N SELF-SUPERVISED MXN MXN OF SELF-SUPERVISED 0 M FEATURE AFFINITIES PATCH LAPLACIAN EIGENSEGMENTS FEATURES DENSE INPUT IMAGE LDI/2(D-W)D-1/2 FEATURES F {Y,Y;EIGS(L) AFFINITIES W FEAT 2A)UNSUPERVISED OBJECT LOCALIZATION FIEDLER EIGENVECTOR YI THRESHOLD AT 0 EIGENSEGMENTS OBJECT BOUNDING LARGEST CONNECTED {A;Y)EIGS(L) BOX COMPONENT 2B)UNSUPERVISED SELF-SUPERVISED K-MEANS SEMANTIC SEGMENTATION P EIGENSEGMENTS EXTRACT PER-REGION CLUSTER REGION FEATURES CLUSTER X OVER SEMANTIC {AY)EIGS(L) EIGENVECTOR DIMENSION FEATURES ACROSS DATASET SEGMENTATION -->
 ![Deep Spectral Methods](5.png)
 
 #### Video Object Segmentation
@@ -224,7 +221,7 @@ $$
 \tag{2}
 $$
 
-**Feature Extraction：**特征提取部分，作者直接使用DINOv2训练好的VIT权重来进行初始化，并固定参数：
+<strong>Feature Extraction：</strong>特征提取部分，作者直接使用DINOv2训练好的VIT权重来进行初始化，并固定参数：
 
 $$\mathcal F=\{\mathrm{f_{t-n}, \cdots, f_{t+n}\}=\bigg\{\phi_{DINO}(v'_{t-n}),\cdots,\phi_{DINO}(v'_{t+n})\bigg\}}\in\mathbb R^{(2n+1)\times N'\times D}\tag{3} $$
 
