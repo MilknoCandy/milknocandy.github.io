@@ -50,7 +50,7 @@ editPost:
 > 评价：well-written
 >
 
-# 介绍
+## 介绍
 **背景**：<u>无监督多目标分割</u>借助自监督学习预训练中学习到的强力的语义信息展示了显著的效果。通常也是通过添加额外的模态（比如深度、动作）来增强视频序列的分割结果。然而，在 _合成序列 _中观察到的性能提升<u>依赖</u>于额外信息的鲁棒性，并不能转化为更具挑战的真实世界场景。
 
 **任务**：给定一个复杂场景的视频序列，目标是训练一个视觉系统能够<u>发现、追踪和分割</u>图像帧里的目标，将数百万的像素的视觉信息抽象为<i>语义部分</i>。（object-centric视觉表征学习）
@@ -76,12 +76,12 @@ editPost:
 + 对图像：使用来源于预训练模型的<u>低级特征</u>（如颜色、语义特征等）来确定像素到目标的分配
 + 对视频：通常结合额外的模态、信号（如光流、深度图），可直接从不连续性获得分割掩码
 
-## 提出问题
+### 提出问题
 **使用额外信息带来的问题**：在视频中使用额外的信号会增加**计算开销**和**误差累积**。比如光流信号在处理<u>静态或可变形</u>物体以及帧间<u>大位移</u>时可能会产生问题，而深度值在普通视频中可能不易获得，在<u>低光照</u>或<u>低对比度</u>环境中其估算也会受到影响。
 
 **过度分割问题**：由于视觉场景的复杂性，使用固定数量的<u>slots</u>可能导致过度分割问题（over-segmentation issuse）。
 
-## 解决问题
+### 解决问题
 **作者方法**：**首次**提出用于<u>真实世界序列中多目标分割</u>的完全无监督方法。SOLV，一个能够发现真实世界视频序列中多个目标且不使用额外的模态信息或任何类似弱监督方法（比如使用第一帧进行初始化）。
 
 **方案**：使用轴向空间-时隙注意力（axial spatial-temporal slot attentions）
@@ -107,8 +107,8 @@ editPost:
 
 ![Source from: Conditional object-centric learning from video](2.png)
 
-## 相关工作
-### Object-centric Learning
+### 相关工作
+#### Object-centric Learning
 图像和视频的object-centric无监督表征学习现有几种解决办法：
 
 + 对比学习方法：
@@ -151,7 +151,7 @@ editPost:
 
 当前，在没有精确引导的情况下准确识别复杂视觉场景中的物体仍具有挑战。现有工作以来于从<u>运动分割掩码</u><sup>[R1-2]</sup>或<u>初始对象位置</u><sup>[R3-4]</sup>的引导初始化。为克服这个局限，DINOSAUR<sup>[R6]</sup>借助之前的预训练模型<sup>[R5]</sup>学习到的归纳偏置来重建特征空间。<u>作者也是这个方法来在真实数据中学习object-centric表征，无需任何引导初始化或明显的监督信号。</u>
 
-### Object Localizaiton from DINO Features
+#### Object Localizaiton from DINO Features
 DINO展示了VIT在自监督学习中超强的性能。一些研究者<sup>[R7]</sup>通过聚类等传统的图划分方法将DINO提取到的特征进行分组，应用在下游任务中。CutLER将这个方法进行了扩展，提出了MaskCut可以不断的生成伪标签并更新，借此训练网络。
 
 ![Pipeline of CutLER](3.gif)
@@ -161,7 +161,7 @@ DINO展示了VIT在自监督学习中超强的性能。一些研究者<sup>[R7]<
 <!-- 这是一张图片，ocr 内容为：COLOR AFFINITIES W MXN MXN KNN 1) SPECTRAL DECOMPOSITION N SELF-SUPERVISED MXN MXN OF SELF-SUPERVISED 0 M FEATURE AFFINITIES PATCH LAPLACIAN EIGENSEGMENTS FEATURES DENSE INPUT IMAGE LDI/2(D-W)D-1/2 FEATURES F {Y,Y;EIGS(L) AFFINITIES W FEAT 2A)UNSUPERVISED OBJECT LOCALIZATION FIEDLER EIGENVECTOR YI THRESHOLD AT 0 EIGENSEGMENTS OBJECT BOUNDING LARGEST CONNECTED {A;Y)EIGS(L) BOX COMPONENT 2B)UNSUPERVISED SELF-SUPERVISED K-MEANS SEMANTIC SEGMENTATION P EIGENSEGMENTS EXTRACT PER-REGION CLUSTER REGION FEATURES CLUSTER X OVER SEMANTIC {AY)EIGS(L) EIGENVECTOR DIMENSION FEATURES ACROSS DATASET SEGMENTATION -->
 ![Deep Spectral Methods](5.png)
 
-### Video Object Segmentation
+#### Video Object Segmentation
 Video Object Segmentation(VOS)旨在识别视频中<u>显著的对象</u>：
 
 + 无监督设置下，不依赖标注，
@@ -185,7 +185,7 @@ Video Object Segmentation(VOS)旨在识别视频中<u>显著的对象</u>：
 >
 > [R7]: Deep Spectral Methods: A Surprisingly Strong Baseline for Unsupervised Semantic Segmentation and Localization.（CVPR2022）
 
-# 方法
+## 方法
 首先介绍考虑到的场景问题，然后描述提出的object-centric结构细节。
 
 ### Problem Scenario

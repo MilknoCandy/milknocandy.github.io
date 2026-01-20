@@ -154,7 +154,7 @@ body {
     }
 }
 
-/* Layout two image parallel */
+/* FEATURE: Layout two image parallel */
 
 /* 针对所有独立段落数学公式（通常被包裹在 .katex-display 或 .MathJax_Display 中） */
 .katex-display,
@@ -165,4 +165,128 @@ body {
     padding: 10px 0;
     /* 使用响应式单位：如果公式太宽，它会相对于容器宽度缩小
     font-size: clamp(0.7rem, 2.5vw, 1rem) !important;  */
+}
+
+/* ============================================================
+   PaperMod Gemini 风格动态卡片样式
+   包含：顺时针流光边框、悬停放大、深色模式深度优化
+   ============================================================ */
+/* 1. 基础卡片容器 */
+.post-entry {
+    position: relative;
+    background: var(--entry);
+    border-radius: 16px;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1;
+    overflow: hidden;
+    /* 裁剪流光 */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* 基础边框线 */
+}
+
+/* 2. 悬停放大 */
+.post-entry:hover {
+    transform: scale(1.025);
+}
+
+/* 3. Gemini 炫彩流光层 */
+.post-entry::before {
+    content: "";
+    position: absolute;
+    inset: -25%;
+    /* 扩大范围以容纳模糊效果 */
+    /* Gemini 标志性的四色渐变 */
+    background: conic-gradient(from 0deg,
+            transparent 0deg,
+            #4285f4 90deg,
+            /* Google Blue */
+            #9b72cb 180deg,
+            /* Purple/Gemini */
+            #d96570 270deg,
+            /* Coral */
+            #4285f4 360deg);
+    z-index: -2;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    /* 顺时针旋转动画 */
+    animation: gemini-rotate 6s linear infinite;
+    /* 关键：增加高斯模糊，营造流光感 */
+    filter: blur(10px);
+}
+
+/* 基础卡片设置 */
+.post-entry {
+    position: relative;
+    border-radius: var(--radius);
+    background: var(--entry);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    /* 隐藏超出边框的流光部分 */
+    z-index: 1;
+}
+
+/* 鼠标移入时放大 */
+.post-entry:hover {
+    transform: scale(1.02);
+}
+
+/* 修改流光层 ::before */
+.post-entry::before {
+    content: "";
+    position: absolute;
+    top: -150%;
+    left: -150%;
+    width: 400%;
+    height: 400%;
+
+    /* 【手动定义起点】在这里定义颜色分布 */
+    /* 我们只在 0deg 到 180deg 之间定义彩色，其余部分设为透明 */
+    background: conic-gradient(from 0deg,
+            /* 渐变的起始偏移量 */
+            transparent 0deg,
+            /* 起点之前透明 */
+            #4285f4 90deg,
+            /* 起点颜色 */
+            #9b72cb 135deg,
+            #d96570 180deg,
+            /* 终点颜色 */
+            transparent 180.1deg
+            /* 终点之后立即透明 */
+        );
+
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -2;
+}
+
+/* 悬停触发 */
+.post-entry:hover::before {
+    opacity: 1;
+    /* 你可以把 infinite 去掉，如果只想让它滑动一次 */
+    /* animation: gemini-clockwise 4s cubic-bezier(0.4, 0, 0.2, 1) infinite; */
+    animation: gemini-clockwise 4s linear infinite;
+}
+
+/* 内部遮罩层：确保卡片中间是纯色，只露出边缘 */
+.post-entry::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    /* 这里的 2px 就是边框的粗细 */
+    background: var(--entry);
+    border-radius: calc(var(--radius) - 1px);
+    z-index: -1;
+}
+
+/* 【手动定义运动轨迹】控制旋转的起始和结束度数 */
+@keyframes gemini-clockwise {
+    from {
+        /* 定义开始时的旋转角度 */
+        transform: rotate(0deg);
+    }
+
+    to {
+        /* 定义结束时的旋转角度 */
+        transform: rotate(360deg);
+    }
 }
