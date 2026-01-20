@@ -5,7 +5,7 @@ draft: false
 title: '​Designing Bert for Convolutional Networks'
 # weight: 1
 # aliases: ["/first"]
-tags: ["Self-Supervised Learning", "Masked Image Modeling"]
+tags: ["Self-Supervised Learning", "Masked Image Modeling", "Computer Vision"]
 author: "PaperMoon"
 # author: ["Me", "You"] # multiple authors
 showToc: true
