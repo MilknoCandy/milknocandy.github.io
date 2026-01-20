@@ -150,12 +150,12 @@ menu:
 pygmentsUseClasses: true
 markup:
   highlight:
-    noClasses: false
-    # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
-    # lineNos: true
-    # style: monokai
+    noClasses: false  # use classes, needed for pygmentsUseClasses above
+    anchorLineNos: true
+    codeFences: true  # enable code fences
+    guessSyntax: true # enable to guess language if not specified
+    lineNos: true # enable line numbers
+    style: github-dark
   goldmark:
     parser:
       attribute: true
