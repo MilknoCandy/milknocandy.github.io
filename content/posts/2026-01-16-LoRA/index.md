@@ -70,7 +70,7 @@ A solid summary of various LoRA variants.
 
 ![MixLoRA](2-mixlora.png)
 
-📔【_**ICLR 2024**_】- Mixture of LoRA Experts (*Microsoft Research Asis, Tsinghua University*)
+📔【_**ICLR 2024**_】- Mixture of LoRA Experts (*Microsoft Research Asia, Tsinghua University*)
 {{< box default >}}
 **Subject:** Multiple LoRA Merging
 + **Problem:** Combining multiple LoRA adapters into a single model is challenging. Existing methods (e.g., linear interpolation or reference-tuning) either degrade the generation quality of pre-trained models or incur high training costs.
