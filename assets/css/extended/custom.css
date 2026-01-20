@@ -1,4 +1,5 @@
-/* Auto Figure Numbering Stylesheet */
+/* FEATURE: Auto Figure Numbering Stylesheet */
+
 /* 1. 初始化计数器 */
 body {
     counter-reset: sec-count;
@@ -39,7 +40,7 @@ body {
     content: "Fig. " counter(sec-count) "." counter(fig-count) ": ";
 }
 
-/* Auto Figure Numbering Stylesheet */
+/* FEATURE: Auto Figure Numbering Stylesheet */
 
 /* Highlight Box Stylesheet */
 /* Basic Container format */
@@ -101,3 +102,67 @@ body {
 }
 
 /* Highlight Box Stylesheet */
+
+/* FEATURE Layout two image parallel */
+/* 网格容器：支持多行多图 */
+.main-figure {
+    margin-top: -1.5em !important;
+    /* 彻底取消顶部间距 */
+    margin-bottom: 1rem !important;
+}
+
+.side-by-side-wrapper.grid-layout {
+    display: flex;
+    flex-wrap: wrap;
+    /* 允许换行 */
+    justify-content: center;
+    gap: 5px;
+    margin: 5px auto;
+    /* 通过变量控制整体最大宽度，如果没有设置则默认 100% */
+    max-width: var(--container-w, 100%);
+}
+
+/* 子图项：通过变量 --w 控制比例 */
+.side-item {
+    /* 默认每张图占 45% (约等于并排两张)，如果有变量则按变量走 */
+    flex: 0 0 var(--w, 45%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.side-item img {
+    width: 100%;
+    /* 填充父容器 .side-item */
+    height: auto;
+    border-radius: 4px;
+    object-fit: contain;
+}
+
+.side-item p {
+    margin-top: 0px;
+    font-size: 0.85em;
+    color: #888;
+}
+
+/* 📱 手机端适配：强制单行或保持比例 */
+@media (max-width: 768px) {
+    .side-item {
+        flex: 0 0 100%;
+        /* 手机端通常建议占满 */
+    }
+}
+
+/* Layout two image parallel */
+
+/* 针对所有独立段落数学公式（通常被包裹在 .katex-display 或 .MathJax_Display 中） */
+.katex-display,
+.MathJax_Display {
+    overflow-x: auto;
+    /* 如果还是太大，允许左右滑动 */
+    overflow-y: hidden;
+    padding: 10px 0;
+    /* 使用响应式单位：如果公式太宽，它会相对于容器宽度缩小
+    font-size: clamp(0.7rem, 2.5vw, 1rem) !important;  */
+}

@@ -1,9 +1,21 @@
 <!-- Image Render Template in .md -->
-<figure>
+<!-- <figure>
     <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" />
     {{- if .Text -}}
     <figcaption>
         <span class="auto-fig-title">{{ .Text }}</span>
+    </figcaption>
+    {{- end -}}
+</figure> -->
+
+{{- $isSideBySide := hasPrefix .Text "side:" -}}
+{{- $caption := strings.TrimPrefix "side:" .Text -}}
+
+<figure {{ if $isSideBySide }}class="side-by-side-item" {{ end }}>
+    <img src="{{ .Destination | safeURL }}" alt="{{ $caption }}" />
+    {{- if $caption -}}
+    <figcaption>
+        <span class="auto-fig-title">{{ $caption }}</span>
     </figcaption>
     {{- end -}}
 </figure>

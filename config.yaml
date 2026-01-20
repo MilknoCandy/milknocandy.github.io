@@ -150,6 +150,17 @@ markup:
   goldmark:
     parser:
       attribute: true
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+        # not translate this
+          block:
+            - ["$$", "$$"]
+          inline:
+            - ["$", "$"]
   renderHooks:
     image:
       enableDefault: true
