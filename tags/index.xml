@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on PaperMoon&#39;s blog</title>
+    <link>https://milknocandy.github.io/tags/</link>
+    <description>Recent content in Tags on PaperMoon&#39;s blog</description>
+    <image>
+      <title>PaperMoon&#39;s blog</title>
+      <url>https://milknocandy.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://milknocandy.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.154.3</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 22 Jan 2026 11:58:18 +0800</lastBuildDate>
+    <atom:link href="https://milknocandy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NVCC</title>
+      <link>https://milknocandy.github.io/tags/nvcc/</link>
+      <pubDate>Tue, 20 Jan 2026 17:32:00 +0800</pubDate>
+      <guid>https://milknocandy.github.io/tags/nvcc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Flash Card</title>
+      <link>https://milknocandy.github.io/tags/flash-card/</link>
+      <pubDate>Fri, 16 Jan 2026 00:09:30 +0800</pubDate>
+      <guid>https://milknocandy.github.io/tags/flash-card/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LoRA Variants</title>
+      <link>https://milknocandy.github.io/tags/lora-variants/</link>
+      <pubDate>Fri, 16 Jan 2026 00:09:30 +0800</pubDate>
+      <guid>https://milknocandy.github.io/tags/lora-variants/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Computer Vision</title>
+      <link>https://milknocandy.github.io/tags/computer-vision/</link>
+      <pubDate>Thu, 28 Aug 2025 20:47:43 +0800</pubDate>
+      <guid>https://milknocandy.github.io/tags/computer-vision/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Masked Image Modeling</title>
+      <link>https://milknocandy.github.io/tags/masked-image-modeling/</link>
+      <pubDate>Thu, 28 Aug 2025 20:47:43 +0800</pubDate>
+      <guid>https://milknocandy.github.io/tags/masked-image-modeling/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Self-Supervised Learning</title>
+      <link>https://milknocandy.github.io/tags/self-supervised-learning/</link>
+      <pubDate>Thu, 28 Aug 2025 20:47:43 +0800</pubDate>
+      <guid>https://milknocandy.github.io/tags/self-supervised-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Well Written</title>
+      <link>https://milknocandy.github.io/tags/well-written/</link>
+      <pubDate>Thu, 28 Aug 2025 20:47:43 +0800</pubDate>
+      <guid>https://milknocandy.github.io/tags/well-written/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Image Segmentation</title>
+      <link>https://milknocandy.github.io/tags/image-segmentation/</link>
+      <pubDate>Sun, 10 Dec 2023 11:35:33 +0800</pubDate>
+      <guid>https://milknocandy.github.io/tags/image-segmentation/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

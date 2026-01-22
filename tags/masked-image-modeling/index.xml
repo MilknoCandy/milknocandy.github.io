@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Masked Image Modeling on PaperMoon&#39;s blog</title>
+    <link>https://milknocandy.github.io/tags/masked-image-modeling/</link>
+    <description>Recent content in Masked Image Modeling on PaperMoon&#39;s blog</description>
+    <image>
+      <title>PaperMoon&#39;s blog</title>
+      <url>https://milknocandy.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://milknocandy.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.154.3</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 20 Jan 2026 12:57:15 +0800</lastBuildDate>
+    <atom:link href="https://milknocandy.github.io/tags/masked-image-modeling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>​Designing Bert for Convolutional Networks</title>
+      <link>https://milknocandy.github.io/posts/2025-08-28-spark/</link>
+      <pubDate>Thu, 28 Aug 2025 20:47:43 +0800</pubDate>
+      <guid>https://milknocandy.github.io/posts/2025-08-28-spark/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;SparK：&lt;a href=&#34;https://github.com/keyu-tian/SparK&#34;&gt;Designing Bert for Convolutional Networkss: Sparse and Hierarchical Masked Modeling&lt;/a&gt; (ICLR 2023 Spotlight)&lt;/p&gt;
+&lt;p&gt;论文介绍：&lt;font style=&#34;color:rgb(38, 38, 38);&#34;&gt;&lt;/font&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV11s4y1M7qL/&#34;&gt;https://www.bilibili.com/video/BV11s4y1M7qL/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Bert算法是遮住数据的一部分，用模型去进行预测，达到一个自监督学习的效果。迁移到图像领域中的视觉Transformer的工作比如MAE，但是直接将Transformer替换为卷积网络则出现问题。如下图，zero-outing表示直接替换：&lt;/p&gt;
+&lt;!-- 这是一张图片，ocr 内容为：HIERARCHY APE MASKING EPOCH METHOD STD. LOSS ACC. 83.1 -1.0 NOT PRETRAINED 0.07 SPARK(OURS) 84.1 2 0.0 MASKED ONLY 1600 SPARSE X 3 83.2 0.06 ZERO-OUTING 1600 -0.9 MASKED ONLY ZERO-OUTING --&gt;
+&lt;p&gt;
+&lt;figure &gt;
+    &lt;img src=&#34;fig1.png&#34; alt=&#34;&#34; /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;可以看到只有0.1个点的提升，是完全无效的。下面是作者的分析。&lt;/p&gt;
+&lt;h2 id=&#34;为什么失败&#34;&gt;为什么失败？&lt;/h2&gt;
+&lt;h3 id=&#34;问题1pixel-intensity-distribution-shift&#34;&gt;问题1：Pixel Intensity Distribution Shift&lt;/h3&gt;
+&lt;p&gt;Transformer在处理patches时，只要保证是随机删去一些patches，可以保证删除的patches和图像的像素分布是一致的。而卷积神经网络则不能删去一些像素，只能是将一些像素“涂黑”来模拟丢失这部分像素的信息。&lt;/p&gt;
+&lt;!-- 这是一张图片，ocr 内容为：CNN SPARSE CNN TRANSFORMER ENCODING PROCESS: PIXEL INTENSITY DATA DISTRIBUTION MA PROBABILITY BEFORE/AFTER MASKING: (A)DIRECTLY DROPPING (C)SPARSELY DROPPING (B)ZERO-OUTING (D) RAW INPUT --&gt;
+&lt;p&gt;
+&lt;figure &gt;
+    &lt;img src=&#34;fig2.png&#34; alt=&#34;像素分布。横轴是像素强度，纵轴是像素出现的频率&#34; /&gt;&lt;figcaption&gt;
+        &lt;span class=&#34;auto-fig-title&#34;&gt;像素分布。横轴是像素强度，纵轴是像素出现的频率&lt;/span&gt;
+    &lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

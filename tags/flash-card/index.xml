@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Flash Card on PaperMoon&#39;s blog</title>
+    <link>https://milknocandy.github.io/tags/flash-card/</link>
+    <description>Recent content in Flash Card on PaperMoon&#39;s blog</description>
+    <image>
+      <title>PaperMoon&#39;s blog</title>
+      <url>https://milknocandy.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://milknocandy.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.154.3</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 20 Jan 2026 11:27:56 +0800</lastBuildDate>
+    <atom:link href="https://milknocandy.github.io/tags/flash-card/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LoRA Variants Surveys</title>
+      <link>https://milknocandy.github.io/posts/2026-01-16-lora/</link>
+      <pubDate>Fri, 16 Jan 2026 00:09:30 +0800</pubDate>
+      <guid>https://milknocandy.github.io/posts/2026-01-16-lora/</guid>
+      <description>&lt;h2 id=&#34;1-timeline-order&#34;&gt;1 Timeline Order&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Summarize the literature reviewed in chronological order.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;2023&#34;&gt;2023&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;📝【&lt;em&gt;&lt;strong&gt;EMNLP 2023 - Main&lt;/strong&gt;&lt;/em&gt;】- Sparse Low-rank Adaptation of Pre-trained Language Models (&lt;em&gt;Tsinghua University, The University of Chicago&lt;/em&gt;)&lt;/p&gt;
+&lt;div class=&#34;highlight-box default&#34;&gt;
+    &lt;div class=&#34;box-content&#34;&gt;
+        &lt;p&gt;&lt;strong&gt;Subject:&lt;/strong&gt; Adaptive Rank Selection&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Problem:&lt;/strong&gt; Standard LoRA uses a fixed, inflexible rank (hyperparameter $ r
+ $), requiring expensive manual tuning.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Core Idea:&lt;/strong&gt; Make the rank learnable rather than fixed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mechanism:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Gating:&lt;/strong&gt; Introduces an optimizable gating unit to the low-rank matrices.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Optimization:&lt;/strong&gt; Uses proximal gradient methods to update the gates.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dynamics:&lt;/strong&gt; Prunes less important ranks during training automatically.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Result:&lt;/strong&gt; Eliminates discrete rank search; the model discovers its own optimal rank structure.&lt;/li&gt;
+&lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+&lt;figure &gt;
+    &lt;img src=&#34;1-sora.png&#34; alt=&#34;SoRA&#34; /&gt;&lt;figcaption&gt;
+        &lt;span class=&#34;auto-fig-title&#34;&gt;SoRA&lt;/span&gt;
+    &lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

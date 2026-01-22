@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>PaperMoon&#39;s blog</title>
+    <link>https://milknocandy.github.io/</link>
+    <description>Recent content on PaperMoon&#39;s blog</description>
+    <image>
+      <title>PaperMoon&#39;s blog</title>
+      <url>https://milknocandy.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://milknocandy.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.154.3</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 22 Jan 2026 11:58:18 +0800</lastBuildDate>
+    <atom:link href="https://milknocandy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NVCC Master Guide: From Installation to Performance Tuning</title>
+      <link>https://milknocandy.github.io/tech/2026-1-20-nvcc/</link>
+      <pubDate>Tue, 20 Jan 2026 17:32:00 +0800</pubDate>
+      <guid>https://milknocandy.github.io/tech/2026-1-20-nvcc/</guid>
+      <description>&lt;h2 id=&#34;1-installation&#34;&gt;1 Installation&lt;/h2&gt;
+&lt;h3 id=&#34;11-installation-for-python-environment&#34;&gt;1.1 Installation for python environment&lt;/h3&gt;
+&lt;p&gt;To install &lt;code&gt;nvcc&lt;/code&gt; inside a Python virtual environment, conda is all you need. It lets you pick the exact CUDA version for each env, so you never clash with system-wide installs. Please follow the steps below to install &lt;code&gt;nvcc&lt;/code&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Search for all available &lt;code&gt;nvcc&lt;/code&gt; version&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-1&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-1&#34;&gt; 1&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-2&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-2&#34;&gt; 2&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-3&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-3&#34;&gt; 3&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-4&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-4&#34;&gt; 4&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-5&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-5&#34;&gt; 5&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-6&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-6&#34;&gt; 6&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-7&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-7&#34;&gt; 7&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-8&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-8&#34;&gt; 8&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-9&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-9&#34;&gt; 9&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-10&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-10&#34;&gt;10&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-11&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-11&#34;&gt;11&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-12&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-12&#34;&gt;12&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-13&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-13&#34;&gt;13&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-14&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-14&#34;&gt;14&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-15&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-15&#34;&gt;15&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-16&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-16&#34;&gt;16&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-17&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-17&#34;&gt;17&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-18&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-18&#34;&gt;18&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-19&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-19&#34;&gt;19&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-20&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-20&#34;&gt;20&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# activate your conda environment first&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ conda activate xxenv
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# search for available cudatoolkit versions&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ conda search cudatoolkit --channel conda-forge
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# output like this:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Loading channels: &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Name                       Version           Build  Channel             &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cudatoolkit                   5.5rc1              p0  anaconda/pkgs/pro   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cudatoolkit                    5.5.1              p0  anaconda/pkgs/pro   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cudatoolkit                      6.0              p0  anaconda/pkgs/pro   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cudatoolkit                      7.0               &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;  anaconda/pkgs/pro   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cudatoolkit                      7.5               &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;  anaconda/pkgs/free  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cudatoolkit                      7.5               &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;  anaconda/pkgs/free  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cudatoolkit                      8.0               &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;  anaconda/pkgs/free  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cudatoolkit                      8.0               &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;  anaconda/pkgs/free  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cudatoolkit                      9.0      h13b8566_0  anaconda/pkgs/main  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cudatoolkit                      9.0      h13b8566_0  pkgs/main           
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cudatoolkit                      9.2               &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;  anaconda/pkgs/main  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cudatoolkit                      9.2               &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;  pkgs/main    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Install specific version of &lt;code&gt;nvcc&lt;/code&gt;
+If you install nvcc within the base environment, you may run into errors such as &lt;code&gt;OSError: [Errno 39] Directory not empty: &#39;xxx/anaconda3/lib/ossl-modules&#39;&lt;/code&gt;. Therefore, I recommend installing it in a manually created virtual environment instead.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-1&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-1&#34;&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-2&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-2&#34;&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Install specific version of `nvcc`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ conda install -c nvidia &lt;span class=&#34;nv&#34;&gt;cudatoolkit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;11.8 -y &lt;span class=&#34;c1&#34;&gt;# or conda install -c conda-forge cudatoolkit=x.x&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Now let us check what we have obtained by running this.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LoRA Variants Surveys</title>
+      <link>https://milknocandy.github.io/posts/2026-01-16-lora/</link>
+      <pubDate>Fri, 16 Jan 2026 00:09:30 +0800</pubDate>
+      <guid>https://milknocandy.github.io/posts/2026-01-16-lora/</guid>
+      <description>&lt;h2 id=&#34;1-timeline-order&#34;&gt;1 Timeline Order&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Summarize the literature reviewed in chronological order.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;2023&#34;&gt;2023&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;📝【&lt;em&gt;&lt;strong&gt;EMNLP 2023 - Main&lt;/strong&gt;&lt;/em&gt;】- Sparse Low-rank Adaptation of Pre-trained Language Models (&lt;em&gt;Tsinghua University, The University of Chicago&lt;/em&gt;)&lt;/p&gt;
+&lt;div class=&#34;highlight-box default&#34;&gt;
+    &lt;div class=&#34;box-content&#34;&gt;
+        &lt;p&gt;&lt;strong&gt;Subject:&lt;/strong&gt; Adaptive Rank Selection&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Problem:&lt;/strong&gt; Standard LoRA uses a fixed, inflexible rank (hyperparameter $ r
+ $), requiring expensive manual tuning.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Core Idea:&lt;/strong&gt; Make the rank learnable rather than fixed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mechanism:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Gating:&lt;/strong&gt; Introduces an optimizable gating unit to the low-rank matrices.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Optimization:&lt;/strong&gt; Uses proximal gradient methods to update the gates.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dynamics:&lt;/strong&gt; Prunes less important ranks during training automatically.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Result:&lt;/strong&gt; Eliminates discrete rank search; the model discovers its own optimal rank structure.&lt;/li&gt;
+&lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+&lt;figure &gt;
+    &lt;img src=&#34;1-sora.png&#34; alt=&#34;SoRA&#34; /&gt;&lt;figcaption&gt;
+        &lt;span class=&#34;auto-fig-title&#34;&gt;SoRA&lt;/span&gt;
+    &lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>​Designing Bert for Convolutional Networks</title>
+      <link>https://milknocandy.github.io/posts/2025-08-28-spark/</link>
+      <pubDate>Thu, 28 Aug 2025 20:47:43 +0800</pubDate>
+      <guid>https://milknocandy.github.io/posts/2025-08-28-spark/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;SparK：&lt;a href=&#34;https://github.com/keyu-tian/SparK&#34;&gt;Designing Bert for Convolutional Networkss: Sparse and Hierarchical Masked Modeling&lt;/a&gt; (ICLR 2023 Spotlight)&lt;/p&gt;
+&lt;p&gt;论文介绍：&lt;font style=&#34;color:rgb(38, 38, 38);&#34;&gt;&lt;/font&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV11s4y1M7qL/&#34;&gt;https://www.bilibili.com/video/BV11s4y1M7qL/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Bert算法是遮住数据的一部分，用模型去进行预测，达到一个自监督学习的效果。迁移到图像领域中的视觉Transformer的工作比如MAE，但是直接将Transformer替换为卷积网络则出现问题。如下图，zero-outing表示直接替换：&lt;/p&gt;
+&lt;!-- 这是一张图片，ocr 内容为：HIERARCHY APE MASKING EPOCH METHOD STD. LOSS ACC. 83.1 -1.0 NOT PRETRAINED 0.07 SPARK(OURS) 84.1 2 0.0 MASKED ONLY 1600 SPARSE X 3 83.2 0.06 ZERO-OUTING 1600 -0.9 MASKED ONLY ZERO-OUTING --&gt;
+&lt;p&gt;
+&lt;figure &gt;
+    &lt;img src=&#34;fig1.png&#34; alt=&#34;&#34; /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;可以看到只有0.1个点的提升，是完全无效的。下面是作者的分析。&lt;/p&gt;
+&lt;h2 id=&#34;为什么失败&#34;&gt;为什么失败？&lt;/h2&gt;
+&lt;h3 id=&#34;问题1pixel-intensity-distribution-shift&#34;&gt;问题1：Pixel Intensity Distribution Shift&lt;/h3&gt;
+&lt;p&gt;Transformer在处理patches时，只要保证是随机删去一些patches，可以保证删除的patches和图像的像素分布是一致的。而卷积神经网络则不能删去一些像素，只能是将一些像素“涂黑”来模拟丢失这部分像素的信息。&lt;/p&gt;
+&lt;!-- 这是一张图片，ocr 内容为：CNN SPARSE CNN TRANSFORMER ENCODING PROCESS: PIXEL INTENSITY DATA DISTRIBUTION MA PROBABILITY BEFORE/AFTER MASKING: (A)DIRECTLY DROPPING (C)SPARSELY DROPPING (B)ZERO-OUTING (D) RAW INPUT --&gt;
+&lt;p&gt;
+&lt;figure &gt;
+    &lt;img src=&#34;fig2.png&#34; alt=&#34;像素分布。横轴是像素强度，纵轴是像素出现的频率&#34; /&gt;&lt;figcaption&gt;
+        &lt;span class=&#34;auto-fig-title&#34;&gt;像素分布。横轴是像素强度，纵轴是像素出现的频率&lt;/span&gt;
+    &lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Self-supervised Object-Centric Learning for Videos</title>
+      <link>https://milknocandy.github.io/posts/2023-12-10-cutler/</link>
+      <pubDate>Sun, 10 Dec 2023 11:35:33 +0800</pubDate>
+      <guid>https://milknocandy.github.io/posts/2023-12-10-cutler/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;来源：&lt;a href=&#34;https://openreview.net/group?id=NeurIPS.cc/2023/Conference&#34;&gt;NIPS 2023&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;论文地址：&lt;a href=&#34;http://arxiv.org/abs/2310.06907&#34;&gt;http://arxiv.org/abs/2310.06907&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;代码地址：❌&lt;/p&gt;
+&lt;p&gt;作者主页：二作谢伟迪主页&lt;a href=&#34;https://weidixie.github.io/&#34;&gt;https://weidixie.github.io/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;项目主页：&lt;a href=&#34;https://kuis-ai.github.io/solv/&#34;&gt;https://kuis-ai.github.io/solv/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;介绍&#34;&gt;介绍&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;背景&lt;/strong&gt;：&lt;u&gt;无监督多目标分割&lt;/u&gt;借助自监督学习预训练中学习到的强力的语义信息展示了显著的效果。通常也是通过添加额外的模态（比如深度、动作）来增强视频序列的分割结果。然而，在 _合成序列 _中观察到的性能提升&lt;u&gt;依赖&lt;/u&gt;于额外信息的鲁棒性，并不能转化为更具挑战的真实世界场景。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;任务&lt;/strong&gt;：给定一个复杂场景的视频序列，目标是训练一个视觉系统能够&lt;u&gt;发现、追踪和分割&lt;/u&gt;图像帧里的目标，将数百万的像素的视觉信息抽象为&lt;i&gt;语义部分&lt;/i&gt;。（object-centric视觉表征学习）&lt;/p&gt;
+&lt;figure class=&#34;main-figure&#34;&gt;
+  &lt;div class=&#34;side-by-side-wrapper grid-layout&#34;&gt;
+    &lt;div class=&#34;side-item&#34; style=&#34;--w: 45%&#34;&gt;
+      &lt;img src=&#34;1.gif&#34;&gt;
+      &lt;p&gt;(a) Ground Truth&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;side-item&#34; style=&#34;--w: 45%&#34;&gt;
+      &lt;img src=&#34;1-2.gif&#34;&gt;
+      &lt;p&gt;(b) Prediction&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- &lt;figcaption&gt;
+    &lt;span class=&#34;auto-fig-title&#34;&gt;非对称比例对比&lt;/span&gt;
+  &lt;/figcaption&gt; --&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;领域的发展&lt;/strong&gt;：从&lt;i&gt;合成图像&lt;/i&gt;开始，转向&lt;u&gt;in-the-wild&lt;/u&gt;图像和&lt;u&gt;real-world&lt;/u&gt;视频。现有方法通常使用自编码器训练范式（如重建输入信号，希望能基于数据或结构的先验来将&lt;u&gt;区域像素&lt;/u&gt;分组为有语义意义的对象）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对图像：使用来源于预训练模型的&lt;u&gt;低级特征&lt;/u&gt;（如颜色、语义特征等）来确定像素到目标的分配&lt;/li&gt;
+&lt;li&gt;对视频：通常结合额外的模态、信号（如光流、深度图），可直接从不连续性获得分割掩码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;提出问题&#34;&gt;提出问题&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;使用额外信息带来的问题&lt;/strong&gt;：在视频中使用额外的信号会增加&lt;strong&gt;计算开销&lt;/strong&gt;和&lt;strong&gt;误差累积&lt;/strong&gt;。比如光流信号在处理&lt;u&gt;静态或可变形&lt;/u&gt;物体以及帧间&lt;u&gt;大位移&lt;/u&gt;时可能会产生问题，而深度值在普通视频中可能不易获得，在&lt;u&gt;低光照&lt;/u&gt;或&lt;u&gt;低对比度&lt;/u&gt;环境中其估算也会受到影响。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;过度分割问题&lt;/strong&gt;：由于视觉场景的复杂性，使用固定数量的&lt;u&gt;slots&lt;/u&gt;可能导致过度分割问题（over-segmentation issuse）。&lt;/p&gt;
+&lt;h3 id=&#34;解决问题&#34;&gt;解决问题&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;作者方法&lt;/strong&gt;：&lt;strong&gt;首次&lt;/strong&gt;提出用于&lt;u&gt;真实世界序列中多目标分割&lt;/u&gt;的完全无监督方法。SOLV，一个能够发现真实世界视频序列中多个目标且不使用额外的模态信息或任何类似弱监督方法（比如使用第一帧进行初始化）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;方案&lt;/strong&gt;：使用轴向空间-时隙注意力（axial spatial-temporal slot attentions）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首先对每帧内空间区域进行分组&lt;/li&gt;
+&lt;li&gt;然后使用来自相邻帧的交互来丰富时隙表示（slot representations）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;训练策略&lt;/strong&gt;：masked autoencoder（MAE）训练范式。两个优势：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;充当信息瓶颈（information bottleneck），让模型观察部分区域，强迫模型学习高级语义结构。&lt;/li&gt;
+&lt;li&gt;缓解内存限制，有助于提高计算效率&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;针对&lt;strong&gt;over-segmentation&lt;/strong&gt;问题：作者通过使用简单的聚类算法来融合相似的slots。&lt;/p&gt;
+&lt;p&gt;总的来说，贡献如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;提出一个在真实世界视频上的自监督多目标分割模型，使用axial spatial-temporal slots attention，能有效地将具有相似特性的视觉区域进行分组，而不需要使用&lt;u&gt;额外的信号&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;展示了一个基于掩码特征重建的object-centric学习方式以及slot融合方法。&lt;/li&gt;
+&lt;li&gt;MOVi-E和Youtube-VIS 2019数据集上的SOTA以及DAVIS2017数据集上的具有竞争力的性能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;slot即视频中的各物体对象，见下图。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;figure &gt;
+    &lt;img src=&#34;2.png&#34; alt=&#34;Source from: Conditional object-centric learning from video&#34; /&gt;&lt;figcaption&gt;
+        &lt;span class=&#34;auto-fig-title&#34;&gt;Source from: Conditional object-centric learning from video&lt;/span&gt;
+    &lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;相关工作&#34;&gt;相关工作&lt;/h3&gt;
+&lt;h4 id=&#34;object-centric-learning&#34;&gt;Object-centric Learning&lt;/h4&gt;
+&lt;p&gt;图像和视频的object-centric无监督表征学习现有几种解决办法：&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
