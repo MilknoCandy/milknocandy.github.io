@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.154.3</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 20 Jan 2026 11:27:56 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 07 Mar 2026 14:32:05 +0800</lastBuildDate>
     <atom:link href="https://milknocandy.github.io/tags/flash-card/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LoRA Variants Surveys</title>
@@ -27,7 +27,7 @@
 &lt;h3 id=&#34;2023&#34;&gt;2023&lt;/h3&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;📝【&lt;em&gt;&lt;strong&gt;EMNLP 2023 - Main&lt;/strong&gt;&lt;/em&gt;】- Sparse Low-rank Adaptation of Pre-trained Language Models (&lt;em&gt;Tsinghua University, The University of Chicago&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;📝【&lt;em&gt;&lt;strong&gt;EMNLP 2023 - Main&lt;/strong&gt;&lt;/em&gt;】- check Sparse Low-rank Adaptation of Pre-trained Language Models (&lt;em&gt;Tsinghua University, The University of Chicago&lt;/em&gt;)&lt;/p&gt;
 &lt;div class=&#34;highlight-box default&#34;&gt;
     &lt;div class=&#34;box-content&#34;&gt;
         &lt;p&gt;&lt;strong&gt;Subject:&lt;/strong&gt; Adaptive Rank Selection&lt;/p&gt;
