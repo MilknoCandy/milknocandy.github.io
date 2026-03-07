@@ -18,6 +18,7 @@ disableShare: false
 disableHLJS: false
 hideSummary: false
 searchHidden: false
+hiddenInHomeList: true
 ShowReadingTime: false
 ShowBreadCrumbs: true
 ShowPostNavLinks: true

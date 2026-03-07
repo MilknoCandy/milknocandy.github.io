@@ -43,7 +43,7 @@ editPost:
 
 + ### 2023
 
-📝【_**EMNLP 2023 - Main**_】- Sparse Low-rank Adaptation of Pre-trained Language Models (*Tsinghua University, The University of Chicago*)
+📝【_**EMNLP 2023 - Main**_】- check Sparse Low-rank Adaptation of Pre-trained Language Models (*Tsinghua University, The University of Chicago*)
 
 {{< box default >}}
 **Subject:** Adaptive Rank Selection

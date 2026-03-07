@@ -2,7 +2,7 @@
 # languageCode: en-us
 # title: My New Hugo Site
 
-baseURL: "https://milknocandy.github.io/" # url for home page
+baseURL: "https://milknocandy.github.io/" # url for home page (for github actions deployment)
 title: PaperMoon's blog # title for home page
 pagination: 
   pagerSize: 5
@@ -50,7 +50,7 @@ params:
 
   assets:
     # disableHLJS: true # to disable highlight.js
-    # disableFingerprinting: true
+    disableFingerprinting: true
     favicon: "/favicon.ico"
     favicon16x16: "/favicon-16x16.png"
     favicon32x32: "/favicon-96x96.png"
