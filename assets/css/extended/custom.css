@@ -290,3 +290,25 @@ body {
         transform: rotate(360deg);
     }
 }
+
+mark {
+    background-color: transparent;
+    color: inherit;
+    /* border-bottom: 2px solid #ffab00;
+    padding-bottom: 1px; */
+
+    /* core attribute */
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    /* wavy | dashed | dotted | double | solid */
+    text-decoration-color: #ffab00;
+    /* color for underline */
+    text-underline-offset: 4px;
+    /* distance between text and underline */
+    text-decoration-thickness: 1.5px;
+    /* thickness of underline */
+}
+
+.dark mark {
+    text-decoration-color: #ffd54f;
+}
