@@ -11,20 +11,27 @@
     </image>
     <generator>Hugo -- 0.154.3</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Mar 2026 14:32:05 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 07 Mar 2026 17:23:40 +0800</lastBuildDate>
     <atom:link href="https://milknocandy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flash Card</title>
+      <link>https://milknocandy.github.io/tags/flash-card/</link>
+      <pubDate>Sat, 07 Mar 2026 14:51:21 +0800</pubDate>
+      <guid>https://milknocandy.github.io/tags/flash-card/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Unified Multimodal Models</title>
+      <link>https://milknocandy.github.io/tags/unified-multimodal-models/</link>
+      <pubDate>Sat, 07 Mar 2026 14:51:21 +0800</pubDate>
+      <guid>https://milknocandy.github.io/tags/unified-multimodal-models/</guid>
+      <description></description>
+    </item>
     <item>
       <title>NVCC</title>
       <link>https://milknocandy.github.io/tags/nvcc/</link>
       <pubDate>Tue, 20 Jan 2026 17:32:00 +0800</pubDate>
       <guid>https://milknocandy.github.io/tags/nvcc/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Flash Card</title>
-      <link>https://milknocandy.github.io/tags/flash-card/</link>
-      <pubDate>Fri, 16 Jan 2026 00:09:30 +0800</pubDate>
-      <guid>https://milknocandy.github.io/tags/flash-card/</guid>
       <description></description>
     </item>
     <item>

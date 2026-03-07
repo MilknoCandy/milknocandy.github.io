@@ -11,8 +11,47 @@
     </image>
     <generator>Hugo -- 0.154.3</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Mar 2026 14:32:05 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 07 Mar 2026 17:23:40 +0800</lastBuildDate>
     <atom:link href="https://milknocandy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Evolution of Unified Multimodal Models</title>
+      <link>https://milknocandy.github.io/posts/2026-03-07-umm/</link>
+      <pubDate>Sat, 07 Mar 2026 14:51:21 +0800</pubDate>
+      <guid>https://milknocandy.github.io/posts/2026-03-07-umm/</guid>
+      <description>&lt;h2 id=&#34;1-timeline-order&#34;&gt;1 Timeline Order&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Summarize the literature reviewed in chronological order.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;2026&#34;&gt;2026&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🍰【&lt;em&gt;&lt;strong&gt;Arxiv 2026&lt;/strong&gt;&lt;/em&gt;】WeMMU: Enhanced Bridging of Vision-Language Models and Diffusion Models via Noisy Query Tokens (&lt;em&gt;&lt;ins&gt;MoE Key Laboratory of Brain-inspired Intelligent Perception and Cognition - University of Science and Technology of China&lt;/ins&gt;&lt;/em&gt; &lt;em&gt;, ZheJiang University, The Hong Kong University of Science and Technology&lt;/em&gt;)&lt;/p&gt;
+&lt;div class=&#34;highlight-box default&#34;&gt;
+    &lt;div class=&#34;box-content&#34;&gt;
+        &lt;p&gt;&lt;strong&gt;Subject:&lt;/strong&gt; Bridging Pre-trained VLMs and Diffusion Models for UMMs&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Problem:&lt;/strong&gt; Existing methods (MetaQuery) &lt;mark&gt;performs alignment via learnable queries&lt;/mark&gt;, but suffer from poor task generalization. They require retraining in the early stage for significantly different task types.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Core Idea:&lt;/strong&gt; Probabilistic Expert Bridge (from Bagel) samples Noisy Query Tokens.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mechanism:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Noisy Query Tokens:&lt;/strong&gt; Sample tokens from the standard normal distribution $N(0, I)$ at each training step to learn a robust distributed intermediate representation space instead of task-specific features.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Probabilistic Expert Bridge:&lt;/strong&gt; Freeze VLM core parameters, add a parallel generative pathway, follow the division of labor (VLM for understanding, Diffusion Model for generation), and use Position MLP for feature alignment and spatial cue injection.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VAE Branch:&lt;/strong&gt; Inject VAE fine-grained features into VLM via a linear projection layer to fuse high-level semantics ans low-level visual details, reducing the Diffusion Models&amp;rsquo;s burden.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Progressive Training:&lt;/strong&gt; Adopt a four-stage curriculum training strategy, flexibly switch between contrastive/conditional flow matching loss, and gradually upgrade resolution and task complexity.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Results:&lt;/strong&gt; Though the performance is not SOTA, it alleviates task generalization collapse of UMMs, facilitates stable cross-task continual learning and retains fine-grained image details.&lt;/li&gt;
+&lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+&lt;figure &gt;
+    &lt;img src=&#34;1_WeMMU.png&#34; alt=&#34;WeMMU&#34; /&gt;&lt;figcaption&gt;
+        &lt;span class=&#34;auto-fig-title&#34;&gt;WeMMU&lt;/span&gt;
+    &lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>NVCC Master Guide: From Installation to Performance Tuning</title>
       <link>https://milknocandy.github.io/tech/2026-1-20-nvcc/</link>
@@ -100,7 +139,7 @@ If you install nvcc within the base environment, you may run into errors such as
 &lt;h3 id=&#34;2023&#34;&gt;2023&lt;/h3&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;📝【&lt;em&gt;&lt;strong&gt;EMNLP 2023 - Main&lt;/strong&gt;&lt;/em&gt;】- check Sparse Low-rank Adaptation of Pre-trained Language Models (&lt;em&gt;Tsinghua University, The University of Chicago&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;📝【&lt;em&gt;&lt;strong&gt;EMNLP 2023 - Main&lt;/strong&gt;&lt;/em&gt;】- Sparse Low-rank Adaptation of Pre-trained Language Models (&lt;em&gt;Tsinghua University, The University of Chicago&lt;/em&gt;)&lt;/p&gt;
 &lt;div class=&#34;highlight-box default&#34;&gt;
     &lt;div class=&#34;box-content&#34;&gt;
         &lt;p&gt;&lt;strong&gt;Subject:&lt;/strong&gt; Adaptive Rank Selection&lt;/p&gt;
