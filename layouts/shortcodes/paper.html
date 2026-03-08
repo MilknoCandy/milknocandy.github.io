@@ -1,0 +1,122 @@
+<details class="paper-details-wrapper">
+    <summary class="paper-summary">
+        <div class="summary-inner">
+            {{ $v := .Get "venue" | upper }}
+
+            {{ $iconSVG := "" }}
+            {{ if (in $v "CVPR") }}
+            {{ $iconSVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="v-icon">
+                <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
+                <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+                <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+                <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+            </svg>` }}
+            {{ else if (or (in $v "ICCV") (in $v "ECCV")) }}
+            {{ $iconSVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="v-icon">
+                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+            </svg>` }}
+            {{ else if (or (in $v "NeuroIPS") (in $v "ICML") (in $v "ICLR")) }}
+            {{ $iconSVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="v-icon">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="M12 8v4"></path>
+                <path d="M12 16h.01"></path>
+            </svg>` }}
+            {{ else if (in $v "ACL") }}
+            {{ $iconSVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" class="v-icon">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>` }}
+            {{ else if (or (and (in $v "ACM") (in $v "MM")) (in $v "SIGMM")) }}
+            {{ $iconSVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" class="v-icon">
+                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                <line x1="7" y1="2" x2="7" y2="22"></line>
+                <line x1="17" y1="2" x2="17" y2="22"></line>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <line x1="2" y1="7" x2="7" y2="7"></line>
+                <line x1="2" y1="17" x2="7" y2="17"></line>
+                <line x1="17" y1="17" x2="22" y2="17"></line>
+                <line x1="17" y1="7" x2="22" y2="7"></line>
+            </svg>` }}
+            {{ else if (in $v "ARXIV") }}
+            {{ $iconSVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="v-icon">
+                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+            </svg>` }}
+            {{ else }}
+            {{ $iconSVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="v-icon">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a4 4 0 0 0-4-4H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a4 4 0 0 1 4-4h6z"></path>
+            </svg>` }}
+            {{ end }}
+
+            <span class="s-venue-dynamic v-{{ $v | urlize }}">
+                {{ $iconSVG | safeHTML }}
+                <span class="v-text">{{ .Get "venue" }}</span>
+            </span>
+
+            <p class="s-title">{{ .Get "title" | safeHTML }}</p>
+            <span class="s-toggle-icon">🔻</span>
+        </div>
+    </summary>
+
+    <div class="paper-card-expanded">
+        <div class="expand-action-bar">
+            <div class="org-outer-container">
+                {{ with .Get "org" }}
+                <div class="org-group">
+                    {{ $orgList := split . "," }}
+                    {{ range $orgList }}
+                    {{ $item := . | htmlUnescape | safeHTML }} {{ if ne (trim $item " ") "" }} <span class="org-tag">🏛️
+                        {{ trim $item " " }}</span>
+                    {{ end }}
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+
+            <div class="action-btns-fixed">
+                {{ with .Get "author" }}<a href="{{ . | safeURL }}" target="_blank" class="act-btn">👤 Author</a>{{
+                end
+                }}
+                {{ with .Get "paper" }}<a href="{{ . | safeURL }}" target="_blank" class="act-btn">📄 Paper</a>{{
+                end }}
+                {{ with .Get "code" }}<a href="{{ . | safeURL }}" target="_blank" class="act-btn">💻 Code</a>{{ end
+                }}
+                {{ with .Get "demo" }}<a href="{{ . | safeURL }}" target="_blank" class="act-btn">🚀 Demo</a>{{ end
+                }}
+            </div>
+        </div>
+
+        <div class="expand-grid">
+            <div class="ex-row"><span class="ex-icon">🏷️</span>
+                <div class="ex-text"><b>Subject:</b> {{ .Get "subject" | safeHTML}}</div>
+            </div>
+            <div class="ex-row"><span class="ex-icon">❓</span>
+                <div class="ex-text"><b>Problem:</b> {{ .Get "problem" | safeHTML}}</div>
+            </div>
+            <div class="ex-row"><span class="ex-icon">💡</span>
+                <div class="ex-text"><b>Idea:</b> {{ .Get "idea" | safeHTML}}</div>
+            </div>
+
+            <div class="ex-row ex-sol-box">
+                <span class="ex-icon">🛠️</span>
+                <div class="ex-text">
+                    <b>Solution:</b>
+                    <div class="ex-markdown-inner">{{ .Inner | markdownify }}</div>
+                </div>
+            </div>
+
+            <div class="ex-row"><span class="ex-icon">🏆</span>
+                <div class="ex-text"><b>Results:</b> {{ .Get "result" | safeHTML}}</div>
+            </div>
+        </div>
+    </div>
+</details>
