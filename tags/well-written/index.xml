@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Well Written on PaperMoon&#39;s blog</title>
-    <link>https://milknocandy.github.io/tags/well-written/</link>
+    <link>http://localhost:1313/tags/well-written/</link>
     <description>Recent content in Well Written on PaperMoon&#39;s blog</description>
     <image>
       <title>PaperMoon&#39;s blog</title>
-      <url>https://milknocandy.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://milknocandy.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.154.3</generator>
     <language>en</language>
     <lastBuildDate>Tue, 20 Jan 2026 21:00:43 +0800</lastBuildDate>
-    <atom:link href="https://milknocandy.github.io/tags/well-written/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/well-written/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>​Designing Bert for Convolutional Networks</title>
-      <link>https://milknocandy.github.io/posts/2025-08-28-spark/</link>
+      <link>http://localhost:1313/posts/2025-08-28-spark/</link>
       <pubDate>Thu, 28 Aug 2025 20:47:43 +0800</pubDate>
-      <guid>https://milknocandy.github.io/posts/2025-08-28-spark/</guid>
+      <guid>http://localhost:1313/posts/2025-08-28-spark/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;SparK：&lt;a href=&#34;https://github.com/keyu-tian/SparK&#34;&gt;Designing Bert for Convolutional Networkss: Sparse and Hierarchical Masked Modeling&lt;/a&gt; (ICLR 2023 Spotlight)&lt;/p&gt;
 &lt;p&gt;论文介绍：&lt;font style=&#34;color:rgb(38, 38, 38);&#34;&gt;&lt;/font&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV11s4y1M7qL/&#34;&gt;https://www.bilibili.com/video/BV11s4y1M7qL/&lt;/a&gt;&lt;/p&gt;
@@ -40,9 +40,9 @@
     </item>
     <item>
       <title>Self-supervised Object-Centric Learning for Videos</title>
-      <link>https://milknocandy.github.io/posts/2023-12-10-cutler/</link>
+      <link>http://localhost:1313/posts/2023-12-10-cutler/</link>
       <pubDate>Sun, 10 Dec 2023 11:35:33 +0800</pubDate>
-      <guid>https://milknocandy.github.io/posts/2023-12-10-cutler/</guid>
+      <guid>http://localhost:1313/posts/2023-12-10-cutler/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;来源：&lt;a href=&#34;https://openreview.net/group?id=NeurIPS.cc/2023/Conference&#34;&gt;NIPS 2023&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;论文地址：&lt;a href=&#34;http://arxiv.org/abs/2310.06907&#34;&gt;http://arxiv.org/abs/2310.06907&lt;/a&gt;&lt;/p&gt;

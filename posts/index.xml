@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on PaperMoon&#39;s blog</title>
-    <link>https://milknocandy.github.io/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on PaperMoon&#39;s blog</description>
     <image>
       <title>PaperMoon&#39;s blog</title>
-      <url>https://milknocandy.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://milknocandy.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.154.3</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Mar 2026 17:38:14 +0800</lastBuildDate>
-    <atom:link href="https://milknocandy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Mar 2026 21:32:05 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Evolution of Unified Multimodal Models</title>
-      <link>https://milknocandy.github.io/posts/2026-03-07-umm/</link>
+      <link>http://localhost:1313/posts/2026-03-07-umm/</link>
       <pubDate>Sat, 07 Mar 2026 14:51:21 +0800</pubDate>
-      <guid>https://milknocandy.github.io/posts/2026-03-07-umm/</guid>
+      <guid>http://localhost:1313/posts/2026-03-07-umm/</guid>
       <description>&lt;h2 id=&#34;1-timeline-order&#34;&gt;1 Timeline Order&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Summarize the literature reviewed in chronological order.&lt;/p&gt;
@@ -93,28 +93,30 @@
             &lt;div class=&#34;ex-row&#34;&gt;&lt;span class=&#34;ex-icon&#34;&gt;❓&lt;/span&gt;
                 &lt;div class=&#34;ex-text&#34;&gt;&lt;b&gt;Problem:&lt;/b&gt; Existing methods (MetaQuery) performs &lt;mark&gt;alignment via learnable queries&lt;/mark&gt;, but suffer from poor task generalization. They require retraining in the early stage for significantly different task types.&lt;/div&gt;
             &lt;/div&gt;
-            &lt;div class=&#34;ex-row&#34;&gt;&lt;span class=&#34;ex-icon&#34;&gt;💡&lt;/span&gt;
-                &lt;div class=&#34;ex-text&#34;&gt;&lt;b&gt;Idea:&lt;/b&gt; Probabilistic Expert Bridge (from Bagel) samples Noisy Query Tokens.&lt;/div&gt;
-            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;ex-row&#34;&gt;&lt;span class=&#34;ex-icon&#34;&gt;💡&lt;/span&gt;
+            &lt;div class=&#34;ex-text&#34;&gt;&lt;b&gt;Idea:&lt;/b&gt; Probabilistic Expert Bridge (from Bagel) samples Noisy Query Tokens.&lt;/div&gt;
+        &lt;/div&gt;
 
-            &lt;div class=&#34;ex-row ex-sol-box&#34;&gt;
-                &lt;span class=&#34;ex-icon&#34;&gt;🛠️&lt;/span&gt;
-                &lt;div class=&#34;ex-text&#34;&gt;
-                    &lt;b&gt;Solution:&lt;/b&gt;
-                    &lt;div class=&#34;ex-markdown-inner&#34;&gt;&lt;ul&gt;
+        &lt;div class=&#34;ex-row ex-sol-box&#34;&gt;
+            &lt;span class=&#34;ex-icon&#34;&gt;🛠️&lt;/span&gt;
+            &lt;div class=&#34;ex-text&#34;&gt;
+                &lt;b&gt;Solution:&lt;/b&gt;
+                &lt;div class=&#34;ex-markdown-inner&#34;&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Noisy Query Tokens:&lt;/strong&gt; Sample tokens from the standard normal distribution $N(0, I)$ at each training step to learn a robust distributed intermediate representation space instead of task-specific features.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Probabilistic Expert Bridge:&lt;/strong&gt; Freeze VLM core parameters, add a parallel generative pathway, follow the division of labor (VLM for understanding, Diffusion Model for generation), and use Position MLP for feature alignment and spatial cue injection.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;VAE Branch:&lt;/strong&gt; Inject VAE fine-grained features into VLM via a linear projection layer to fuse high-level semantics ans low-level visual details, reducing the Diffusion Models&amp;rsquo;s burden.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Progressive Training:&lt;/strong&gt; Adopt a four-stage curriculum training strategy, flexibly switch between contrastive/conditional flow matching loss, and gradually upgrade resolution and task complexity.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-
-            &lt;div class=&#34;ex-row&#34;&gt;&lt;span class=&#34;ex-icon&#34;&gt;🏆&lt;/span&gt;
-                &lt;div class=&#34;ex-text&#34;&gt;&lt;b&gt;Results:&lt;/b&gt; Though the performace is not SOTA, it alleviates task generalization collapse of UMMs, facilitates stable cross-task continual learning and retains fine-grained image details.&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
+
+
+        &lt;div class=&#34;ex-row&#34;&gt;&lt;span class=&#34;ex-icon&#34;&gt;🏆&lt;/span&gt;
+            &lt;div class=&#34;ex-text&#34;&gt;&lt;b&gt;Results:&lt;/b&gt; Though the performace is not SOTA, it alleviates task generalization collapse of UMMs, facilitates stable cross-task continual learning and retains fine-grained image details.&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
     &lt;/div&gt;
 &lt;/details&gt;
 
@@ -125,9 +127,9 @@
     </item>
     <item>
       <title>LoRA Variants Surveys</title>
-      <link>https://milknocandy.github.io/posts/2026-01-16-lora/</link>
+      <link>http://localhost:1313/posts/2026-01-16-lora/</link>
       <pubDate>Fri, 16 Jan 2026 00:09:30 +0800</pubDate>
-      <guid>https://milknocandy.github.io/posts/2026-01-16-lora/</guid>
+      <guid>http://localhost:1313/posts/2026-01-16-lora/</guid>
       <description>&lt;h2 id=&#34;1-timeline-order&#34;&gt;1 Timeline Order&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Summarize the literature reviewed in chronological order.&lt;/p&gt;
@@ -164,9 +166,9 @@
     </item>
     <item>
       <title>​Designing Bert for Convolutional Networks</title>
-      <link>https://milknocandy.github.io/posts/2025-08-28-spark/</link>
+      <link>http://localhost:1313/posts/2025-08-28-spark/</link>
       <pubDate>Thu, 28 Aug 2025 20:47:43 +0800</pubDate>
-      <guid>https://milknocandy.github.io/posts/2025-08-28-spark/</guid>
+      <guid>http://localhost:1313/posts/2025-08-28-spark/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;SparK：&lt;a href=&#34;https://github.com/keyu-tian/SparK&#34;&gt;Designing Bert for Convolutional Networkss: Sparse and Hierarchical Masked Modeling&lt;/a&gt; (ICLR 2023 Spotlight)&lt;/p&gt;
 &lt;p&gt;论文介绍：&lt;font style=&#34;color:rgb(38, 38, 38);&#34;&gt;&lt;/font&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV11s4y1M7qL/&#34;&gt;https://www.bilibili.com/video/BV11s4y1M7qL/&lt;/a&gt;&lt;/p&gt;
@@ -189,9 +191,9 @@
     </item>
     <item>
       <title>Self-supervised Object-Centric Learning for Videos</title>
-      <link>https://milknocandy.github.io/posts/2023-12-10-cutler/</link>
+      <link>http://localhost:1313/posts/2023-12-10-cutler/</link>
       <pubDate>Sun, 10 Dec 2023 11:35:33 +0800</pubDate>
-      <guid>https://milknocandy.github.io/posts/2023-12-10-cutler/</guid>
+      <guid>http://localhost:1313/posts/2023-12-10-cutler/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;来源：&lt;a href=&#34;https://openreview.net/group?id=NeurIPS.cc/2023/Conference&#34;&gt;NIPS 2023&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;论文地址：&lt;a href=&#34;http://arxiv.org/abs/2310.06907&#34;&gt;http://arxiv.org/abs/2310.06907&lt;/a&gt;&lt;/p&gt;
