@@ -2,78 +2,78 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on PaperMoon&#39;s blog</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://milknocandy.github.io/tags/</link>
     <description>Recent content in Tags on PaperMoon&#39;s blog</description>
     <image>
       <title>PaperMoon&#39;s blog</title>
-      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://milknocandy.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://milknocandy.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.154.3</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Mar 2026 21:32:05 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Mar 2026 22:52:44 +0800</lastBuildDate>
+    <atom:link href="https://milknocandy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Flash Card</title>
-      <link>http://localhost:1313/tags/flash-card/</link>
+      <link>https://milknocandy.github.io/tags/flash-card/</link>
       <pubDate>Sat, 07 Mar 2026 14:51:21 +0800</pubDate>
-      <guid>http://localhost:1313/tags/flash-card/</guid>
+      <guid>https://milknocandy.github.io/tags/flash-card/</guid>
       <description></description>
     </item>
     <item>
       <title>Unified Multimodal Models</title>
-      <link>http://localhost:1313/tags/unified-multimodal-models/</link>
+      <link>https://milknocandy.github.io/tags/unified-multimodal-models/</link>
       <pubDate>Sat, 07 Mar 2026 14:51:21 +0800</pubDate>
-      <guid>http://localhost:1313/tags/unified-multimodal-models/</guid>
+      <guid>https://milknocandy.github.io/tags/unified-multimodal-models/</guid>
       <description></description>
     </item>
     <item>
       <title>NVCC</title>
-      <link>http://localhost:1313/tags/nvcc/</link>
+      <link>https://milknocandy.github.io/tags/nvcc/</link>
       <pubDate>Tue, 20 Jan 2026 17:32:00 +0800</pubDate>
-      <guid>http://localhost:1313/tags/nvcc/</guid>
+      <guid>https://milknocandy.github.io/tags/nvcc/</guid>
       <description></description>
     </item>
     <item>
       <title>LoRA Variants</title>
-      <link>http://localhost:1313/tags/lora-variants/</link>
+      <link>https://milknocandy.github.io/tags/lora-variants/</link>
       <pubDate>Fri, 16 Jan 2026 00:09:30 +0800</pubDate>
-      <guid>http://localhost:1313/tags/lora-variants/</guid>
+      <guid>https://milknocandy.github.io/tags/lora-variants/</guid>
       <description></description>
     </item>
     <item>
       <title>Computer Vision</title>
-      <link>http://localhost:1313/tags/computer-vision/</link>
+      <link>https://milknocandy.github.io/tags/computer-vision/</link>
       <pubDate>Thu, 28 Aug 2025 20:47:43 +0800</pubDate>
-      <guid>http://localhost:1313/tags/computer-vision/</guid>
+      <guid>https://milknocandy.github.io/tags/computer-vision/</guid>
       <description></description>
     </item>
     <item>
       <title>Masked Image Modeling</title>
-      <link>http://localhost:1313/tags/masked-image-modeling/</link>
+      <link>https://milknocandy.github.io/tags/masked-image-modeling/</link>
       <pubDate>Thu, 28 Aug 2025 20:47:43 +0800</pubDate>
-      <guid>http://localhost:1313/tags/masked-image-modeling/</guid>
+      <guid>https://milknocandy.github.io/tags/masked-image-modeling/</guid>
       <description></description>
     </item>
     <item>
       <title>Self-Supervised Learning</title>
-      <link>http://localhost:1313/tags/self-supervised-learning/</link>
+      <link>https://milknocandy.github.io/tags/self-supervised-learning/</link>
       <pubDate>Thu, 28 Aug 2025 20:47:43 +0800</pubDate>
-      <guid>http://localhost:1313/tags/self-supervised-learning/</guid>
+      <guid>https://milknocandy.github.io/tags/self-supervised-learning/</guid>
       <description></description>
     </item>
     <item>
       <title>Well Written</title>
-      <link>http://localhost:1313/tags/well-written/</link>
+      <link>https://milknocandy.github.io/tags/well-written/</link>
       <pubDate>Thu, 28 Aug 2025 20:47:43 +0800</pubDate>
-      <guid>http://localhost:1313/tags/well-written/</guid>
+      <guid>https://milknocandy.github.io/tags/well-written/</guid>
       <description></description>
     </item>
     <item>
       <title>Image Segmentation</title>
-      <link>http://localhost:1313/tags/image-segmentation/</link>
+      <link>https://milknocandy.github.io/tags/image-segmentation/</link>
       <pubDate>Sun, 10 Dec 2023 11:35:33 +0800</pubDate>
-      <guid>http://localhost:1313/tags/image-segmentation/</guid>
+      <guid>https://milknocandy.github.io/tags/image-segmentation/</guid>
       <description></description>
     </item>
   </channel>

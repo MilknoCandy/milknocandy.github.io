@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>LoRA Variants on PaperMoon&#39;s blog</title>
-    <link>http://localhost:1313/tags/lora-variants/</link>
+    <link>https://milknocandy.github.io/tags/lora-variants/</link>
     <description>Recent content in LoRA Variants on PaperMoon&#39;s blog</description>
     <image>
       <title>PaperMoon&#39;s blog</title>
-      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://milknocandy.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://milknocandy.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.154.3</generator>
     <language>en</language>
     <lastBuildDate>Sat, 07 Mar 2026 14:42:16 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/lora-variants/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://milknocandy.github.io/tags/lora-variants/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LoRA Variants Surveys</title>
-      <link>http://localhost:1313/posts/2026-01-16-lora/</link>
+      <link>https://milknocandy.github.io/posts/2026-01-16-lora/</link>
       <pubDate>Fri, 16 Jan 2026 00:09:30 +0800</pubDate>
-      <guid>http://localhost:1313/posts/2026-01-16-lora/</guid>
+      <guid>https://milknocandy.github.io/posts/2026-01-16-lora/</guid>
       <description>&lt;h2 id=&#34;1-timeline-order&#34;&gt;1 Timeline Order&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Summarize the literature reviewed in chronological order.&lt;/p&gt;
