@@ -95,12 +95,24 @@
             </div>
         </div>
 
+
+        {{- /* 完全保留你的 PaperMod 原有结构 */ -}}
         <div class="expand-grid">
+            {{- /* 仅做核心切分：Inner 按 ||| 拆分为 Problem + Solution */ -}}
+            {{- $sep := "===" -}}
+            {{- $parts := split (trim .Inner "\n\r ") $sep -}}
+
+            {{- /* 直接取值，无容错，确保逻辑绝对简单 */ -}}
+            {{- $problem := index $parts 0 | markdownify -}}
+            {{- $solution := index $parts 1 | markdownify -}}
+            {{- $reference := index $parts 2 | markdownify -}}
             <div class="ex-row"><span class="ex-icon">🏷️</span>
                 <div class="ex-text"><b>Subject:</b> {{ .Get "subject" | safeHTML}}</div>
             </div>
             <div class="ex-row"><span class="ex-icon">❓</span>
-                <div class="ex-text"><b>Problem:</b> {{ .Get "problem" | safeHTML}}</div>
+                <div class="ex-text"><b>Problem:</b>
+                    <div class="ex-markdown-inner"> {{ $problem }}</div>
+                </div>
             </div>
             <div class="ex-row"><span class="ex-icon">💡</span>
                 <div class="ex-text"><b>Idea:</b> {{ .Get "idea" | safeHTML}}</div>
@@ -110,13 +122,22 @@
                 <span class="ex-icon">🛠️</span>
                 <div class="ex-text">
                     <b>Solution:</b>
-                    <div class="ex-markdown-inner">{{ .Inner | markdownify }}</div>
+                    <div class="ex-markdown-inner">{{ $solution }}</div>
                 </div>
             </div>
 
             <div class="ex-row"><span class="ex-icon">🏆</span>
                 <div class="ex-text"><b>Results:</b> {{ .Get "result" | safeHTML}}</div>
             </div>
+
+            {{ with $reference }}
+            <div class="ex-ref-container">
+                <div class="ex-ref-content">
+                    <span class="ex-ref-label">References:<br></span>
+                    {{ . | markdownify }}
+                </div>
+            </div>
+            {{ end }}
         </div>
     </div>
 </details>

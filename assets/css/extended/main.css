@@ -311,3 +311,50 @@
     padding: 1px 8px;
     box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
 }
+
+/* 参考文献容器：取消边框，紧贴上方 */
+.ex-ref-container {
+    /* 极小间距，保持呼吸感但不显疏远 */
+    padding-left: 10px;
+    /* 核心：与上方文字对齐，避开 1.5rem 的图标位置 */
+    width: 100%;
+    display: block;
+    /* 确保换行 */
+}
+
+/* 参考文献正文：进一步弱化 */
+.ex-ref-content {
+    font-size: 0.725rem;
+    line-height: 1.35;
+    color: #999;
+    /* 比正文更浅的灰色 */
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* Ref 标签：极简处理 */
+.ex-ref-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-right: 4px;
+    color: #bbb;
+    /* 标签颜色比内容更淡 */
+}
+
+/* 暗色模式适配 */
+.dark .ex-ref-content {
+    color: #666;
+}
+
+.dark .ex-ref-label {
+    color: #444;
+}
+
+/* 如果有链接，保持极其低调 */
+.ex-ref-content a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}

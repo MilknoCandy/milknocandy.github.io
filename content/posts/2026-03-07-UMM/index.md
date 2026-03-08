@@ -64,27 +64,28 @@ editPost:
 
 + ### 2025
 
-📔【_**ICLR 2025**_】Reconstructive Visual Instruction Tuning (*<ins>Institute of Automation - Chinese Academy of Sciences</ins>* *,  University of Hongkong, MEGVII Technology, StepFun*)
-
 
 {{< paper 
     venue="ICLR 2025" 
     title="Reconstructive Visual Instruction Tuning"
     paper="https://arxiv.org/abs/..."
-    author="https:checkthis"
-    org="Chinese Academy of Sciences, MEGVII Tech., StepFun"
-    code="https://github.com/your-repo"
-    demo="https://your-demo-page.com"
-    subject="具身智能 (Embodied AI) 与鲁棒性"
-    problem="在动态环境中，视觉模态常因遮挡或故障而丢失，导致决策失败。"
+    author="https://haochen-wang409.github.io/"
+    org="Institute of Automation, Chinese Academy of Sciences, University of Hongkong, MEGVII Tech., StepFun"
+    code="https://github.com/haochen-wang409/ross"
+    demo="https://haochen-wang409.github.io/"
+    subject="Visual Instruction Tuning for Large Multimodal Models"
     idea="利用大模型作为‘世界模型’，<mark>通过隐性空间进行跨模态知识补全。</mark>"
     result="在 50% 模态缺失率下，任务成功率较 Baseline 提升 22%。"
 >}}
+- **LLM-centric Training Paradigm:** Conventional <u>visual instruction tuning</u> for LMMs rely on vision-to-text alignment and text-only supervision.
+- **Extrinstic Assistance:** Previous <u>vision-centric</u> methods leverage extra vision experts[1] at the encoder end to enrich the crucial visual details in images for MLLMs, but require careful manual selection of experts and resulting in a complex inference process.
+===
 - **环形注意力 (Ring Attention)**：解决超长序列下传感器数据的存储与对齐。
-- **对比学习**：强化模型在单一模态下的语义提取能力。
 - **中医灵感**：引入“经络映射”逻辑优化数字人各部位的协同效率。
+===
+[1] <b>S. Tong</b> et al., Eyes wid shut? exploring the visual shortcomings of multimodal llms. in CVPR 2024.
 {{< /paper >}}
-![WeMMU](1_WeMMU.png)
+![Training Procedure of ROSS](2_ROSS.png)
 
 
 {{< paper 
@@ -101,7 +102,11 @@ editPost:
     result="在 50% 模态缺失率下，任务成功率较 Baseline 提升 22%。"
 >}}
 - **环形注意力 (Ring Attention)**：解决超长序列下传感器数据的存储与对齐。
+===
 - **对比学习**：强化模型在单一模态下的语义提取能力。
 - **中医灵感**：引入“经络映射”逻辑优化数字人各部位的协同效率。
+===
+- [1] He et al., 'Deep Residual Learning', CVPR 2016.
+- [2] Vaswani et al., 'Attention is All You Need', NeurIPS 2017.
 {{< /paper >}}
 ![WeMMU](1_WeMMU.png)
