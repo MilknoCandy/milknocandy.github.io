@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Teches on PaperMoon&#39;s blog</title>
-    <link>https://milknocandy.github.io/tech/</link>
+    <link>http://localhost:1313/tech/</link>
     <description>Recent content in Teches on PaperMoon&#39;s blog</description>
     <image>
       <title>PaperMoon&#39;s blog</title>
-      <url>https://milknocandy.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://milknocandy.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.154.3</generator>
     <language>en</language>
     <lastBuildDate>Thu, 22 Jan 2026 11:58:18 +0800</lastBuildDate>
-    <atom:link href="https://milknocandy.github.io/tech/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NVCC Master Guide: From Installation to Performance Tuning</title>
-      <link>https://milknocandy.github.io/tech/2026-1-20-nvcc/</link>
+      <link>http://localhost:1313/tech/2026-1-20-nvcc/</link>
       <pubDate>Tue, 20 Jan 2026 17:32:00 +0800</pubDate>
-      <guid>https://milknocandy.github.io/tech/2026-1-20-nvcc/</guid>
+      <guid>http://localhost:1313/tech/2026-1-20-nvcc/</guid>
       <description>&lt;h2 id=&#34;1-installation&#34;&gt;1 Installation&lt;/h2&gt;
 &lt;h3 id=&#34;11-installation-for-python-environment&#34;&gt;1.1 Installation for python environment&lt;/h3&gt;
 &lt;p&gt;To install &lt;code&gt;nvcc&lt;/code&gt; inside a Python virtual environment, conda is all you need. It lets you pick the exact CUDA version for each env, so you never clash with system-wide installs. Please follow the steps below to install &lt;code&gt;nvcc&lt;/code&gt;:&lt;/p&gt;
