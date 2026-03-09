@@ -70,7 +70,7 @@ editPost:
     title="Reconstructive Visual Instruction Tuning"
     paper="https://arxiv.org/abs/..."
     author="https://haochen-wang409.github.io/"
-    org="Institute of Automation, Chinese Academy of Sciences, University of Hongkong, MEGVII Tech., StepFun"
+    org="CASIA, University of Hongkong, MEGVII Tech., StepFun"
     code="https://github.com/haochen-wang409/ross"
     demo="https://haochen-wang409.github.io/ross"
     subject="Visual Instruction Tuning for Large Multimodal Models"
@@ -79,10 +79,10 @@ editPost:
 >}}
 - **LLM-centric Training Paradigm:** Conventional <u>visual instruction tuning</u> for LMMs rely on vision-to-text alignment and text-only supervision.
 - **Extrinstic Assistance:** Previous <u>vision-centric</u> methods leverage extra vision experts[1] at the encoder end to enrich the crucial visual details in images for MLLMs, but require careful manual selection of experts and resulting in a complex inference process.
-- **Spatial Redundancy in Images**: Visual signals have heavy spatial redundancy, making it hard to generate meaningful feedback from natural images.
+- **Spatial Redundancy in Images:** Visual signals have heavy spatial redundancy, making it hard to generate meaningful feedback from natural images.
 ===
-- **Reconsturction Variant Design**: Proposes three regression-based reconstruction variants: $\textbf{ROSS}^R\text{-Pixel}$ (regresses raw RGB pixel values via patchify operation), $\textbf{ROSS}^R\text{-Latent}$ (regresses fine-grained latent tokens extracted by frozen teacher tokenizers VAE/DINOv2/DEiT-III), and $\textbf{ROSS}^R\text{-Latent2Pixel}$ (back to RGB pixel space for regression).
-- **Training Objective**: 
+- **Reconsturction Variant Design:** Proposes three regression-based reconstruction variants: $\textbf{ROSS}^R\text{-Pixel}$ (regresses raw RGB pixel values via patchify operation), $\textbf{ROSS}^R\text{-Latent}$ (regresses fine-grained latent tokens extracted by frozen teacher tokenizers VAE/DINOv2/DEiT-III), and $\textbf{ROSS}^R\text{-Latent2Pixel}$ (back to RGB pixel space for regression).
+- **Training Objective:** 
     - How to reconstruct: Replaces vanilla regression with a per-token denoising objective to address visual spatial redundancy.
     - How to train: Trains the model with a joint loss of original textual next-token prediction and visual reconstructive denoising.
 ===
@@ -90,6 +90,26 @@ editPost:
 {{< /paper >}}
 ![Training Procedure of ROSS](2_ROSS.png)
 
+
+{{< paper 
+    venue="CVPR 2026" 
+    title="UAE: Incentivizing Mutual Benefits for Unified Multimodal Understanding and Generation via RL"
+    paper="https://arxiv.org/abs/2509.09666v4"
+    author="https://yzy-stack.github.io/"
+    org="Peking University, Baidu, Rabbitpre AI, SYSU, USTC, CASIA"
+    code="https://github.com/PKU-YuanGroup/UAE"
+    subject="Bridging Pre-trained VLMs and Diffusion Models for UMMs"
+    idea="Links I2T and T2I via an auto-encoder perspective (text as intermediate latent representation) + Unified-GRPO RL post-training with <mark>reconstructive rewards</mark>"
+    result="UAE achieves an overall Unified-Score of 86.09 on Unified-Bench, surpassing GPT-4o-Image’s 85.95, and attains SOTA generation performance of 0.86 on GenEval and 0.475 on GenEval++. The core innovation of reconstructive reinforcement learning is fully validated, as it successfully <mark>drives the model to produce long, detail-rich text</mark> that indirectly enhances image perception, establishing a bidirectional synergistic mechanism."
+>}}
+- Image-to-text (I2T) and text-to-image (T2I) tasks are optimized independently, failing to leverage their inherent connection for mutual enhancement.
+- <u>Joint training</u> of existing UMMs leads to mutual degradation of understanding and generation capabilities, while <u>decoupled training</u> misses cross-task reciprocal benefits.
+===
+- **Unified Auto-Encoder Paradigm:** Define I2T as image-to-text semantic encoding and T2I as text-to-image decoding, taking semantic similarity between input and reconstructed images as the core optimization objective.
+- **Unified-GRPO Post-Training Strategy:** Adapt to two mainstream UMMs, freeze visual modules to only optimize LLMs, and adopt CLIP+generator as a frozen reconstructive reward module.
+- **Unified-Bench Evaluation Benchmark:** Design dual protocols-calculate Unified-Score through four visual backbones and evaluate caption quality via commercial LLM 
+{{< /paper >}}
+![The workflow of RAE](3_UAE.png)
 
 <!-- {{< paper 
     venue="ACM MM 2026" 
