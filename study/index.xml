@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Studies on PaperMoon&#39;s blog</title>
+    <link>https://milknocandy.github.io/study/</link>
+    <description>Recent content in Studies on PaperMoon&#39;s blog</description>
+    <image>
+      <title>PaperMoon&#39;s blog</title>
+      <url>https://milknocandy.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://milknocandy.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.154.3</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 12 Mar 2026 00:36:13 +0800</lastBuildDate>
+    <atom:link href="https://milknocandy.github.io/study/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Knapsack Problem</title>
+      <link>https://milknocandy.github.io/study/20260311_knapsack/</link>
+      <pubDate>Wed, 11 Mar 2026 21:05:49 +0800</pubDate>
+      <guid>https://milknocandy.github.io/study/20260311_knapsack/</guid>
+      <description>&lt;h2 id=&#34;0-1-knapsack-problem&#34;&gt;0-1 Knapsack Problem&lt;/h2&gt;
+&lt;div class=&#34;highlight-box default&#34;&gt;
+    &lt;div class=&#34;box-content&#34;&gt;
+        &lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;
+There are $N$ items and one knapsack with a maximum capacity of $V$. Each item can be selected at most once (i.e., either take it or leave it). The $i\text{-th}$ item has a volume of $v_i$​ and a value of $w_i$​. Your task is to select a subset of items to put into the knapsack such that:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The total volume of the selected items does not exceed the knapsack&amp;rsquo;s capacity V.&lt;/li&gt;
+&lt;li&gt;The total value of the selected items is maximized.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Output the maximum possible total value achievable under these constraints.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
