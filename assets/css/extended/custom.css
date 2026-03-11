@@ -312,3 +312,7 @@ mark {
 .dark mark {
     text-decoration-color: #ffd54f;
 }
+
+/* ============================================================
+    Code-tabs: showing only the active tab content
+   ============================================================ */

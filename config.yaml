@@ -75,6 +75,8 @@ params:
         url: posts
       - name: Tech
         url: tech
+      - name: Study
+        url: study
       - name: Tags
         url: tags
 
@@ -100,9 +102,9 @@ params:
   #     SiteVerificationTag: "XYZabc"
 
   cover:
-    hidden: true # hide everywhere but not in structured data
+    hidden: false # hide everywhere but not in structured data
     hiddenInList: true # hide on list pages and home
-    hiddenInSingle: true # hide on single page
+    hiddenInSingle: false # hide on single page
 
   editPost:
     URL: "https://github.com/milknocandy/milknocandy.github.io/blob/main/content"
@@ -130,18 +132,22 @@ menu:
       name: 🛠️Tech
       url: /tech/
       weight: 20
+    - identifier: study
+      name: 📚Study
+      url: /study/
+      weight: 30
     - identifier: archives
       name: 📅Archives
       url: /archives/
-      weight: 30
+      weight: 40
     - identifier: tags
       name: 🏷️Tags
       url: /tags/
-      weight: 40
+      weight: 50
     - identifier: search
       name: 🔍Search
       url: /search/
-      weight: 50
+      weight: 60
     # - identifier: example
     #   name: example.org
     #   url: https://example.org
