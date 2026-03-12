@@ -20,51 +20,137 @@
 </div>
 
 <style>
-.code-tabs{margin:1.5rem 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden}
-.tabs-header{position:relative;display:flex;background:#f9fafb;border-bottom:1px solid #e5e7eb;padding:0 1rem}
-.tab-btn{padding:.75rem 1.5rem;border:none;background:none;cursor:pointer;font-size:.9rem;color:#6b7280;transition:color .3s;position:relative;z-index:1}
-.tab-btn.active{color:#2563eb;font-weight:600}
-.tab-indicator{position:absolute;bottom:0;left:0;height:2px;background:#2563eb;transition:all .3s cubic-bezier(.4,0,.2,1)}
-.tabs-content{position:relative}
-.tab-panel{position:absolute;top:0;left:0;width:100%;padding:1rem;opacity:0;pointer-events:none;transition:opacity .3s ease}
-.tab-panel.active{position:relative;opacity:1;pointer-events:auto}
-.tab-panel .highlight{margin:0!important}
-@media(prefers-color-scheme:dark){.code-tabs{border-color:#374151;background:#1f2937}.tabs-header{background:#111827;border-bottom-color:#374151}.tab-btn{color:#9ca3af}.tab-btn.active{color:#60a5fa}.tab-indicator{background:#60a5fa}}
+    .code-tabs {
+        margin: 1.5rem 0;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        overflow: hidden
+    }
+
+    .tabs-header {
+        position: relative;
+        display: flex;
+        background: #f9fafb;
+        border-bottom: 1px solid #e5e7eb;
+        padding: 0 1rem
+    }
+
+    .tab-btn {
+        padding: .75rem 1.5rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-size: .9rem;
+        color: #6b7280;
+        transition: color .3s;
+        position: relative;
+        z-index: 1
+    }
+
+    .tab-btn.active {
+        color: #2563eb;
+        font-weight: 600
+    }
+
+    .tab-btn:hover {
+        opacity: 1;
+        text-decoration: underline;
+        border-color: var(--secondary);
+        color: #2563eb;
+    }
+
+    .tab-indicator {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        background: #2563eb;
+        transition: all .3s cubic-bezier(.4, 0, .2, 1)
+    }
+
+    .tabs-content {
+        position: relative
+    }
+
+    .tab-panel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .3s ease
+    }
+
+    .tab-panel.active {
+        position: relative;
+        opacity: 1;
+        pointer-events: auto
+    }
+
+    .tab-panel .highlight {
+        margin: 0 !important
+    }
+
+    @media(prefers-color-scheme:dark) {
+        .code-tabs {
+            border-color: #374151;
+            background: #1f2937
+        }
+
+        .tabs-header {
+            background: #111827;
+            border-bottom-color: #374151
+        }
+
+        .tab-btn {
+            color: #9ca3af
+        }
+
+        .tab-btn.active {
+            color: #60a5fa
+        }
+
+        .tab-indicator {
+            background: #60a5fa
+        }
+    }
 </style>
 
 <script>
-(function(){
-const c=document.getElementById('{{ $id }}'),
-btns=c.querySelectorAll('.tab-btn'),
-panels=c.querySelectorAll('.tab-panel'),
-ind=c.querySelector('.tab-indicator'),
-cont=c.querySelector('.tabs-content');
-function setIndicator(btn){
-ind.style.width=btn.offsetWidth+'px';
-ind.style.left=btn.offsetLeft+'px';
-}
-function switchTab(i){
-const target=panels[i];
-target.style.position='relative';
-target.style.opacity='1';
-const h=target.offsetHeight;
-cont.style.height=h+'px';
-panels.forEach((p,idx)=>{
-if(idx!=i){
-p.style.position='absolute';
-p.style.opacity='0';
-}
-});
-setTimeout(()=>panels.forEach((p,idx)=>p.classList.toggle('active',idx==i)),300);
-}
-setIndicator(btns[0]);
-switchTab(0);
-btns.forEach(btn=>btn.addEventListener('click',function(){
-const i=this.dataset.index;
-btns.forEach(b=>b.classList.remove('active'));
-this.classList.add('active');
-switchTab(i);
-setIndicator(this);
-}));
-})();
+    (function () {
+        const c = document.getElementById('{{ $id }}'),
+            btns = c.querySelectorAll('.tab-btn'),
+            panels = c.querySelectorAll('.tab-panel'),
+            ind = c.querySelector('.tab-indicator'),
+            cont = c.querySelector('.tabs-content');
+        function setIndicator(btn) {
+            ind.style.width = btn.offsetWidth + 'px';
+            ind.style.left = btn.offsetLeft + 'px';
+        }
+        function switchTab(i) {
+            const target = panels[i];
+            target.style.position = 'relative';
+            target.style.opacity = '1';
+            const h = target.offsetHeight;
+            cont.style.height = h + 'px';
+            panels.forEach((p, idx) => {
+                if (idx != i) {
+                    p.style.position = 'absolute';
+                    p.style.opacity = '0';
+                }
+            });
+            setTimeout(() => panels.forEach((p, idx) => p.classList.toggle('active', idx == i)), 300);
+        }
+        setIndicator(btns[0]);
+        switchTab(0);
+        btns.forEach(btn => btn.addEventListener('click', function () {
+            const i = this.dataset.index;
+            btns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            switchTab(i);
+            setIndicator(this);
+        }));
+    })();
 </script>
