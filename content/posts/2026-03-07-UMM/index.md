@@ -51,16 +51,37 @@ editPost:
     code=""
     demo=""
     subject="Bridging Pre-trained VLMs and Diffusion Models for UMMs"
-    problem="Existing methods (MetaQuery) performs <mark>alignment via learnable queries</mark>, but suffer from poor task generalization. They require retraining in the early stage for significantly different task types."
     idea="Probabilistic Expert Bridge (from Bagel) samples Noisy Query Tokens."
     result="Though the performace is not SOTA, it alleviates task generalization collapse of UMMs, facilitates stable cross-task continual learning and retains fine-grained image details."
 >}}
+Existing methods (MetaQuery) performs <mark>alignment via learnable queries</mark>, but suffer from poor task generalization. They require retraining in the early stage for significantly different task types.
+===
 - **Noisy Query Tokens:** Sample tokens from the standard normal distribution $N(0, I)$ at each training step to learn a robust distributed intermediate representation space instead of task-specific features.
 - **Probabilistic Expert Bridge:** Freeze VLM core parameters, add a parallel generative pathway, follow the division of labor (VLM for understanding, Diffusion Model for generation), and use Position MLP for feature alignment and spatial cue injection.
 - **VAE Branch:** Inject VAE fine-grained features into VLM via a linear projection layer to fuse high-level semantics ans low-level visual details, reducing the Diffusion Models's burden.
 - **Progressive Training:** Adopt a four-stage curriculum training strategy, flexibly switch between contrastive/conditional flow matching loss, and gradually upgrade resolution and task complexity.
 {{< /paper >}}
 ![WeMMU](1_WeMMU.png)
+
+{{< paper 
+    venue="CVPR 2026" 
+    title="UAE: Incentivizing Mutual Benefits for Unified Multimodal Understanding and Generation via RL"
+    paper="https://arxiv.org/abs/2509.09666v4"
+    author="https://yzy-stack.github.io/"
+    org="Peking University, Baidu, Rabbitpre AI, SYSU, USTC, CASIA"
+    code="https://github.com/PKU-YuanGroup/UAE"
+    subject="Bridging Pre-trained VLMs and Diffusion Models for UMMs"
+    idea="Links I2T and T2I via an auto-encoder perspective (text as intermediate latent representation) + Unified-GRPO RL post-training with <mark>reconstructive rewards</mark>"
+    result="UAE achieves an overall Unified-Score of 86.09 on Unified-Bench, surpassing GPT-4o-Image’s 85.95, and attains SOTA generation performance of 0.86 on GenEval and 0.475 on GenEval++. The core innovation of reconstructive reinforcement learning is fully validated, as it successfully <mark>drives the model to produce long, detail-rich text</mark> that indirectly enhances image perception, establishing a bidirectional synergistic mechanism."
+>}}
+- Image-to-text (I2T) and text-to-image (T2I) tasks are optimized independently, failing to leverage their inherent connection for mutual enhancement.
+- <u>Joint training</u> of existing UMMs leads to mutual degradation of understanding and generation capabilities, while <u>decoupled training</u> misses cross-task reciprocal benefits.
+===
+- **Unified Auto-Encoder Paradigm:** Define I2T as image-to-text semantic encoding and T2I as text-to-image decoding, taking semantic similarity between input and reconstructed images as the core optimization objective.
+- **Unified-GRPO Post-Training Strategy:** Adapt to two mainstream UMMs, freeze visual modules to only optimize LLMs, and adopt CLIP+generator as a frozen reconstructive reward module.
+- **Unified-Bench Evaluation Benchmark:** Design dual protocols-calculate Unified-Score through four visual backbones and evaluate caption quality via commercial LLM 
+{{< /paper >}}
+![The workflow of RAE](3_UAE.png)
 
 + ### 2025
 
@@ -91,25 +112,6 @@ editPost:
 ![Training Procedure of ROSS](2_ROSS.png)
 
 
-{{< paper 
-    venue="CVPR 2026" 
-    title="UAE: Incentivizing Mutual Benefits for Unified Multimodal Understanding and Generation via RL"
-    paper="https://arxiv.org/abs/2509.09666v4"
-    author="https://yzy-stack.github.io/"
-    org="Peking University, Baidu, Rabbitpre AI, SYSU, USTC, CASIA"
-    code="https://github.com/PKU-YuanGroup/UAE"
-    subject="Bridging Pre-trained VLMs and Diffusion Models for UMMs"
-    idea="Links I2T and T2I via an auto-encoder perspective (text as intermediate latent representation) + Unified-GRPO RL post-training with <mark>reconstructive rewards</mark>"
-    result="UAE achieves an overall Unified-Score of 86.09 on Unified-Bench, surpassing GPT-4o-Image’s 85.95, and attains SOTA generation performance of 0.86 on GenEval and 0.475 on GenEval++. The core innovation of reconstructive reinforcement learning is fully validated, as it successfully <mark>drives the model to produce long, detail-rich text</mark> that indirectly enhances image perception, establishing a bidirectional synergistic mechanism."
->}}
-- Image-to-text (I2T) and text-to-image (T2I) tasks are optimized independently, failing to leverage their inherent connection for mutual enhancement.
-- <u>Joint training</u> of existing UMMs leads to mutual degradation of understanding and generation capabilities, while <u>decoupled training</u> misses cross-task reciprocal benefits.
-===
-- **Unified Auto-Encoder Paradigm:** Define I2T as image-to-text semantic encoding and T2I as text-to-image decoding, taking semantic similarity between input and reconstructed images as the core optimization objective.
-- **Unified-GRPO Post-Training Strategy:** Adapt to two mainstream UMMs, freeze visual modules to only optimize LLMs, and adopt CLIP+generator as a frozen reconstructive reward module.
-- **Unified-Bench Evaluation Benchmark:** Design dual protocols-calculate Unified-Score through four visual backbones and evaluate caption quality via commercial LLM 
-{{< /paper >}}
-![The workflow of RAE](3_UAE.png)
 
 <!-- {{< paper 
     venue="ACM MM 2026" 

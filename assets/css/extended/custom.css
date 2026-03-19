@@ -156,17 +156,6 @@ body {
 
 /* FEATURE: Layout two image parallel */
 
-/* 针对所有独立段落数学公式（通常被包裹在 .katex-display 或 .MathJax_Display 中） */
-.katex-display,
-.MathJax_Display {
-    overflow-x: auto;
-    /* 如果还是太大，允许左右滑动 */
-    overflow-y: hidden;
-    padding: 10px 0;
-    /* 使用响应式单位：如果公式太宽，它会相对于容器宽度缩小
-    font-size: clamp(0.7rem, 2.5vw, 1rem) !important;  */
-}
-
 /* ============================================================
    PaperMod Gemini 风格动态卡片样式
    包含：顺时针流光边框、悬停放大、深色模式深度优化
@@ -314,5 +303,18 @@ mark {
 }
 
 /* ============================================================
-    Code-tabs: showing only the active tab content
+    KaTeX 公式适配：公式过长时横向滚动，编号 sticky 固定在右侧
    ============================================================ */
+.katex-display {
+    display: block;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.5em 0;
+    position: relative;
+}
+
+.katex-display > .katex > .katex-html > .tag {
+    position: sticky;
+    right: 0;
+}

@@ -37,8 +37,8 @@ editPost:
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
-
-## 0-1 Knapsack Problem
+<!-- set id for section manually -->
+## 0-1 Knapsack Problem {#01knapsack-ref}
 {{< box default >}}
 **Description:**
 There are $N$ items and one knapsack with a maximum capacity of $V$. Each item can be selected at most once (i.e., either take it or leave it). The $i\text{-th}$ item has a volume of $v_i$​ and a value of $w_i$​. Your task is to select a subset of items to put into the knapsack such that:
@@ -156,3 +156,74 @@ if __name__ == '__main__':
     main()
 ```
 {{< /code-tabs >}}
+
+## Complete Knapsack Problem
+{{< box default >}}
+**Description:**
+There are $N$ items and a knapsack with capacity $V$. Each item can be selected any number of times. The $i\text{-th}$ item has volume $v_i$ and value $w_i$. Select items to maximize total value, with total volume $\le V$. Output the maximum value.
+
+**Input Format:**
+- Line 1: Two integers $N, V$ (number of items, knapsack capacity).
+- Next $N$ lines: Each line has two integers $v_i$, $w_i$ (volume and value of the $i\text{-th}$ item).
+
+**Output Format:**
+Output a single integer (maximum total value).
+
+**Constraints:**
+$$0\lt N,V \le 1000\\ 0\lt v_i, w_i \le 1000$$
+
+**Sample Input:**
+```bash
+4 5
+1 2
+2 4
+3 4
+4 5
+```
+**Sample Output:**
+```bash
+10
+```
+{{< /box >}}
+We can add one for-loop to the code from [0-1 Knapsack Problem](#01knapsack-ref).
+{{< code-tabs labels="C++: Think for Unbounded KP" >}}
+```cpp
+#include<bits/stdc++.h>
+
+using namespace std;
+
+const int MAXN = 1005;
+int v[MAXN];    // 体积
+int w[MAXN];    // 价值 
+
+int main() 
+{
+    int n, m;   
+    cin >> n >> m;
+    vector<vector<int>> f(n+1, vector<int>(m+1, 0));
+    for(int i = 1; i <= n; i++) 
+        cin >> v[i] >> w[i];
+
+    for(int i = 1; i <= n; i++) 
+        for(int j = 1; j <= m; j++)
+        {
+            for(int k = 0; k*v[i]<=j; k++){
+                f[i][j] = max(f[i][j], f[i - 1][j - k*v[i]] + k*w[i]);
+            }
+        }           
+
+    cout << f[n][m] << endl;
+
+    return 0;
+}
+```
+{{< /code-tabs >}}
+Let's deduct this, find out how we update:
+$$
+\scriptsize
+\begin{aligned}
+\text{dp}[i][j] &= \max(\text{dp}[i-1][j], \text{dp}[i-1][j-v_i]+w_i, \text{dp}[i-1][j-2\cdot v_i]+2\cdot w_i, ...)\\
+\text{dp}[i][j-v] &= \max(\text{dp}[i-1][j-v], \text{dp}[i-1][j-2\cdot v_i]+2\cdot w_i, \text{dp}[i-1][j-3\cdot v_i]+3\cdot w_i, ...)
+\tag{1-2}
+\end{aligned}
+$$
