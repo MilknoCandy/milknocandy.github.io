@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.154.3</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 09 Mar 2026 22:52:32 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 19 Mar 2026 11:20:49 +0800</lastBuildDate>
     <atom:link href="https://milknocandy.github.io/tags/flash-card/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Evolution of Unified Multimodal Models</title>
@@ -89,13 +89,7 @@
             &lt;/div&gt;
             &lt;div class=&#34;ex-row&#34;&gt;&lt;span class=&#34;ex-icon&#34;&gt;❓&lt;/span&gt;
                 &lt;div class=&#34;ex-text&#34;&gt;&lt;b&gt;Problem:&lt;/b&gt;
-                    &lt;div class=&#34;ex-markdown-inner&#34;&gt; &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Noisy Query Tokens:&lt;/strong&gt; Sample tokens from the standard normal distribution $N(0, I)$ at each training step to learn a robust distributed intermediate representation space instead of task-specific features.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Probabilistic Expert Bridge:&lt;/strong&gt; Freeze VLM core parameters, add a parallel generative pathway, follow the division of labor (VLM for understanding, Diffusion Model for generation), and use Position MLP for feature alignment and spatial cue injection.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;VAE Branch:&lt;/strong&gt; Inject VAE fine-grained features into VLM via a linear projection layer to fuse high-level semantics ans low-level visual details, reducing the Diffusion Models&amp;rsquo;s burden.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Progressive Training:&lt;/strong&gt; Adopt a four-stage curriculum training strategy, flexibly switch between contrastive/conditional flow matching loss, and gradually upgrade resolution and task complexity.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+                    &lt;div class=&#34;ex-markdown-inner&#34;&gt; Existing methods (MetaQuery) performs &lt;mark&gt;alignment via learnable queries&lt;/mark&gt;, but suffer from poor task generalization. They require retraining in the early stage for significantly different task types.&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;div class=&#34;ex-row&#34;&gt;&lt;span class=&#34;ex-icon&#34;&gt;💡&lt;/span&gt;
@@ -106,7 +100,13 @@
                 &lt;span class=&#34;ex-icon&#34;&gt;🛠️&lt;/span&gt;
                 &lt;div class=&#34;ex-text&#34;&gt;
                     &lt;b&gt;Solution:&lt;/b&gt;
-                    &lt;div class=&#34;ex-markdown-inner&#34;&gt;&lt;/div&gt;
+                    &lt;div class=&#34;ex-markdown-inner&#34;&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Noisy Query Tokens:&lt;/strong&gt; Sample tokens from the standard normal distribution $N(0, I)$ at each training step to learn a robust distributed intermediate representation space instead of task-specific features.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Probabilistic Expert Bridge:&lt;/strong&gt; Freeze VLM core parameters, add a parallel generative pathway, follow the division of labor (VLM for understanding, Diffusion Model for generation), and use Position MLP for feature alignment and spatial cue injection.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VAE Branch:&lt;/strong&gt; Inject VAE fine-grained features into VLM via a linear projection layer to fuse high-level semantics ans low-level visual details, reducing the Diffusion Models&amp;rsquo;s burden.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Progressive Training:&lt;/strong&gt; Adopt a four-stage curriculum training strategy, flexibly switch between contrastive/conditional flow matching loss, and gradually upgrade resolution and task complexity.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
 

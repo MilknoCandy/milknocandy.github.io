@@ -11,14 +11,15 @@
     </image>
     <generator>Hugo -- 0.154.3</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Mar 2026 00:36:13 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2026 23:32:44 +0800</lastBuildDate>
     <atom:link href="https://milknocandy.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Knapsack Problem</title>
       <link>https://milknocandy.github.io/study/20260311_knapsack/</link>
       <pubDate>Wed, 11 Mar 2026 21:05:49 +0800</pubDate>
       <guid>https://milknocandy.github.io/study/20260311_knapsack/</guid>
-      <description>&lt;h2 id=&#34;0-1-knapsack-problem&#34;&gt;0-1 Knapsack Problem&lt;/h2&gt;
+      <description>&lt;!-- set id for section manually --&gt;
+&lt;h2 id=&#34;01knapsack-ref&#34;&gt;0-1 Knapsack Problem&lt;/h2&gt;
 &lt;div class=&#34;highlight-box default&#34;&gt;
     &lt;div class=&#34;box-content&#34;&gt;
         &lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;

@@ -2,32 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://milknocandy.github.io/tags/algorithm/</loc>
-    <lastmod>2026-03-12T00:36:13+08:00</lastmod>
-  </url><url>
-    <loc>https://milknocandy.github.io/study/20260311_knapsack/</loc>
-    <lastmod>2026-03-12T00:36:13+08:00</lastmod>
-  </url><url>
     <loc>https://milknocandy.github.io/</loc>
-    <lastmod>2026-03-12T00:36:13+08:00</lastmod>
-  </url><url>
-    <loc>https://milknocandy.github.io/study/</loc>
-    <lastmod>2026-03-12T00:36:13+08:00</lastmod>
-  </url><url>
-    <loc>https://milknocandy.github.io/tags/</loc>
-    <lastmod>2026-03-12T00:36:13+08:00</lastmod>
-  </url><url>
-    <loc>https://milknocandy.github.io/tags/flash-card/</loc>
-    <lastmod>2026-03-09T22:52:32+08:00</lastmod>
+    <lastmod>2026-03-19T11:35:44+08:00</lastmod>
   </url><url>
     <loc>https://milknocandy.github.io/posts/</loc>
-    <lastmod>2026-03-09T22:52:32+08:00</lastmod>
+    <lastmod>2026-03-19T11:35:44+08:00</lastmod>
+  </url><url>
+    <loc>https://milknocandy.github.io/tags/spatial-intelligence/</loc>
+    <lastmod>2026-03-19T11:35:44+08:00</lastmod>
+  </url><url>
+    <loc>https://milknocandy.github.io/posts/2026-03-19-si/</loc>
+    <lastmod>2026-03-19T11:35:44+08:00</lastmod>
+  </url><url>
+    <loc>https://milknocandy.github.io/tags/</loc>
+    <lastmod>2026-03-19T11:35:44+08:00</lastmod>
+  </url><url>
+    <loc>https://milknocandy.github.io/tags/algorithm/</loc>
+    <lastmod>2026-03-16T23:32:44+08:00</lastmod>
+  </url><url>
+    <loc>https://milknocandy.github.io/study/20260311_knapsack/</loc>
+    <lastmod>2026-03-16T23:32:44+08:00</lastmod>
+  </url><url>
+    <loc>https://milknocandy.github.io/study/</loc>
+    <lastmod>2026-03-16T23:32:44+08:00</lastmod>
+  </url><url>
+    <loc>https://milknocandy.github.io/tags/flash-card/</loc>
+    <lastmod>2026-03-19T11:20:49+08:00</lastmod>
   </url><url>
     <loc>https://milknocandy.github.io/posts/2026-03-07-umm/</loc>
-    <lastmod>2026-03-09T22:52:32+08:00</lastmod>
+    <lastmod>2026-03-19T11:20:49+08:00</lastmod>
   </url><url>
     <loc>https://milknocandy.github.io/tags/unified-multimodal-models/</loc>
-    <lastmod>2026-03-09T22:52:32+08:00</lastmod>
+    <lastmod>2026-03-19T11:20:49+08:00</lastmod>
   </url><url>
     <loc>https://milknocandy.github.io/tags/nvcc/</loc>
     <lastmod>2026-01-22T11:58:18+08:00</lastmod>
