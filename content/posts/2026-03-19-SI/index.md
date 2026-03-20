@@ -47,7 +47,7 @@ editPost:
     paper="https://arxiv.org/abs/2601.03590"
     author="https://binisalegend.github.io/"
     org="Beijing Institute of Technology, BUCT"
-    code="https://arxiv.org/abs/2601.03590"
+    code="https://github.com/binisalegend/SiT-Bench"
     demo=""
     subject="Textual spatial reasoning benchmark for intrinsic LLM spatial intelligence evaluation"
     idea="Convert visual scenes into <mark>coordinate-aware text</mark> to isolate and test <mark>symbolic spatial reasoning</mark> in LLMs."

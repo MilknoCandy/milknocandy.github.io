@@ -89,7 +89,7 @@ Existing methods (MetaQuery) performs <mark>alignment via learnable queries</mar
 {{< paper 
     venue="ICLR 2025" 
     title="Reconstructive Visual Instruction Tuning"
-    paper="https://arxiv.org/abs/..."
+    paper="https://arxiv.org/abs/2410.09575"
     author="https://haochen-wang409.github.io/"
     org="CASIA, University of Hongkong, MEGVII Tech., StepFun"
     code="https://github.com/haochen-wang409/ross"
