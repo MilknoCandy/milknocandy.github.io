@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.154.3</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Mar 2026 11:35:44 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 20 Mar 2026 11:56:53 +0800</lastBuildDate>
     <atom:link href="https://milknocandy.github.io/tags/spatial-intelligence/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Spatial Intelligence in Large Models: Benchmarks, Mechanisms, and Reasoning</title>
@@ -66,7 +66,7 @@
             &lt;div class=&#34;action-btns-fixed&#34;&gt;
                 &lt;a href=&#34;https://binisalegend.github.io/&#34; target=&#34;_blank&#34; class=&#34;act-btn&#34;&gt;👤 Author&lt;/a&gt;
                 &lt;a href=&#34;https://arxiv.org/abs/2601.03590&#34; target=&#34;_blank&#34; class=&#34;act-btn&#34;&gt;📄 Paper&lt;/a&gt;
-                &lt;a href=&#34;https://arxiv.org/abs/2601.03590&#34; target=&#34;_blank&#34; class=&#34;act-btn&#34;&gt;💻 Code&lt;/a&gt;
+                &lt;a href=&#34;https://github.com/binisalegend/SiT-Bench&#34; target=&#34;_blank&#34; class=&#34;act-btn&#34;&gt;💻 Code&lt;/a&gt;
                 
             &lt;/div&gt;
         &lt;/div&gt;&lt;div class=&#34;expand-grid&#34;&gt;&lt;div class=&#34;ex-row&#34;&gt;&lt;span class=&#34;ex-icon&#34;&gt;🏷️&lt;/span&gt;
