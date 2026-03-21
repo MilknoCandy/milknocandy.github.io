@@ -11,8 +11,114 @@
     </image>
     <generator>Hugo -- 0.154.3</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Mar 2026 15:46:56 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 21 Mar 2026 21:22:54 +0800</lastBuildDate>
     <atom:link href="https://milknocandy.github.io/tags/flash-card/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spatial Intelligence in Large Models: Benchmarks, Mechanisms, and Reasoning</title>
+      <link>https://milknocandy.github.io/posts/2026-03-19-si/</link>
+      <pubDate>Thu, 19 Mar 2026 11:15:09 +0800</pubDate>
+      <guid>https://milknocandy.github.io/posts/2026-03-19-si/</guid>
+      <description>&lt;h2 id=&#34;1-benchmark&#34;&gt;1 Benchmark&lt;/h2&gt;
+&lt;h3 id=&#34;11-textual-benchmarks&#34;&gt;1.1 Textual Benchmarks&lt;/h3&gt;
+&lt;p&gt;&lt;details class=&#34;paper-details-wrapper&#34;&gt;
+    &lt;summary class=&#34;paper-summary&#34;&gt;
+        &lt;div class=&#34;summary-inner&#34;&gt;
+            
+
+            
+            
+            
+            
+
+            &lt;span class=&#34;s-venue-dynamic v-arxiv-2026&#34;&gt;
+                &lt;svg viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34;
+                stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; class=&#34;v-icon&#34;&gt;
+                &lt;path d=&#34;M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z&#34;&gt;&lt;/path&gt;
+                &lt;polyline points=&#34;14 2 14 8 20 8&#34;&gt;&lt;/polyline&gt;
+            &lt;/svg&gt;
+                &lt;span class=&#34;v-text&#34;&gt;Arxiv 2026&lt;/span&gt;
+            &lt;/span&gt;
+
+            &lt;p class=&#34;s-title&#34;&gt;Can LLMs See Without Pixels? Benchmarking Spatial Intelligence from Textual Descriptions&lt;/p&gt;
+            &lt;span class=&#34;s-toggle-icon&#34;&gt;🔻&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/summary&gt;
+
+    &lt;div class=&#34;paper-card-expanded&#34;&gt;
+        &lt;div class=&#34;expand-action-bar&#34;&gt;
+            &lt;div class=&#34;org-outer-container&#34;&gt;
+                
+                &lt;div class=&#34;org-group&#34;&gt;
+                    
+                    
+                      &lt;span class=&#34;org-tag&#34;&gt;🏛️
+                        Beijing Institute of Technology&lt;/span&gt;
+                    
+                    
+                      &lt;span class=&#34;org-tag&#34;&gt;🏛️
+                        BUCT&lt;/span&gt;
+                    
+                    
+                &lt;/div&gt;
+                
+            &lt;/div&gt;
+
+            &lt;div class=&#34;action-btns-fixed&#34;&gt;
+                &lt;a href=&#34;https://binisalegend.github.io/&#34; target=&#34;_blank&#34; class=&#34;act-btn&#34;&gt;👤 Author&lt;/a&gt;
+                &lt;a href=&#34;https://arxiv.org/abs/2601.03590&#34; target=&#34;_blank&#34; class=&#34;act-btn&#34;&gt;📄 Paper&lt;/a&gt;
+                &lt;a href=&#34;https://github.com/binisalegend/SiT-Bench&#34; target=&#34;_blank&#34; class=&#34;act-btn&#34;&gt;💻 Code&lt;/a&gt;
+                
+            &lt;/div&gt;
+        &lt;/div&gt;&lt;div class=&#34;expand-grid&#34;&gt;&lt;div class=&#34;ex-row&#34;&gt;&lt;span class=&#34;ex-icon&#34;&gt;🏷️&lt;/span&gt;
+                &lt;div class=&#34;ex-text&#34;&gt;&lt;b&gt;Subject:&lt;/b&gt; Textual spatial reasoning benchmark for intrinsic LLM spatial intelligence evaluation&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;ex-row&#34;&gt;&lt;span class=&#34;ex-icon&#34;&gt;❓&lt;/span&gt;
+                &lt;div class=&#34;ex-text&#34;&gt;&lt;b&gt;Problem:&lt;/b&gt;
+                    &lt;div class=&#34;ex-markdown-inner&#34;&gt; &lt;ul&gt;
+&lt;li&gt;Perception–reasoning entanglement in VLM benchmarks&lt;/li&gt;
+&lt;li&gt;Lack of high-fidelity text-only spatial tasks&lt;/li&gt;
+&lt;li&gt;Over-reliance on language priors/pattern matching&lt;/li&gt;
+&lt;li&gt;Weak evaluation of global consistency, mental mapping&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;ex-row&#34;&gt;&lt;span class=&#34;ex-icon&#34;&gt;💡&lt;/span&gt;
+                &lt;div class=&#34;ex-text&#34;&gt;&lt;b&gt;Idea:&lt;/b&gt; Convert visual scenes into &lt;mark&gt;coordinate-aware text&lt;/mark&gt; to isolate and test &lt;mark&gt;symbolic spatial reasoning&lt;/mark&gt; in LLMs.&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&#34;ex-row ex-sol-box&#34;&gt;
+                &lt;span class=&#34;ex-icon&#34;&gt;🛠️&lt;/span&gt;
+                &lt;div class=&#34;ex-text&#34;&gt;
+                    &lt;b&gt;Solution:&lt;/b&gt;
+                    &lt;div class=&#34;ex-markdown-inner&#34;&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;SiT-Bench:&lt;/strong&gt; 3.8K QA across 5 categories, 17 subtasks for spatial cognition&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Textual Encoding:&lt;/strong&gt; Multi-view scenes → coordinate-aware descriptions enabling symbolic reasoning&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dual Construction:&lt;/strong&gt; Image-based generation + vision-benchmark-to-text adaptation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;R1 Filtering:&lt;/strong&gt; Reasoning-based filtering removes trivial, inconsistent, leakage samples&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Evaluation Protocol:&lt;/strong&gt; Compare LLMs/VLMs with/without CoT to isolate reasoning ability&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&#34;ex-row&#34;&gt;&lt;span class=&#34;ex-icon&#34;&gt;🏆&lt;/span&gt;
+                &lt;div class=&#34;ex-text&#34;&gt;&lt;b&gt;Results:&lt;/b&gt; Best model 59.46% vs. 74.42% human; large gap in global tasks (&lt;10% mapping). CoT significantly improves performance, validating latent but underutilized spatial reasoning.&lt;/div&gt;
+            &lt;/div&gt;
+
+            
+
+            
+            
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;figure &gt;
+    &lt;img src=&#34;1_Sample4SiT.png&#34; alt=&#34;Example of SiT Benchmark&#34; /&gt;&lt;figcaption&gt;
+        &lt;span class=&#34;auto-fig-title&#34;&gt;Example of SiT Benchmark&lt;/span&gt;
+    &lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>The Evolution of Unified Multimodal Models</title>
       <link>https://milknocandy.github.io/posts/2026-03-07-umm/</link>
@@ -103,7 +209,7 @@
                     &lt;div class=&#34;ex-markdown-inner&#34;&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Noisy Query Tokens:&lt;/strong&gt; Sample tokens from the standard normal distribution $N(0, I)$ at each training step to learn a robust distributed intermediate representation space instead of task-specific features.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Probabilistic Expert Bridge:&lt;/strong&gt; Freeze VLM core parameters, add a parallel generative pathway, follow the division of labor (VLM for understanding, Diffusion Model for generation), and use Position MLP for feature alignment and spatial cue injection.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;VAE Branch:&lt;/strong&gt; Inject VAE fine-grained features into VLM via a linear projection layer to fuse high-level semantics ans low-level visual details, reducing the Diffusion Models&amp;rsquo;s burden.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VAE Branch:&lt;/strong&gt; Inject VAE fine-grained features into VLM via a linear projection layer to fuse high-level semantics ans low-level visual details, reducing the Diffusion Models&#39;s burden.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Progressive Training:&lt;/strong&gt; Adopt a four-stage curriculum training strategy, flexibly switch between contrastive/conditional flow matching loss, and gradually upgrade resolution and task complexity.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -114,6 +220,9 @@
                 &lt;div class=&#34;ex-text&#34;&gt;&lt;b&gt;Results:&lt;/b&gt; Though the performace is not SOTA, it alleviates task generalization collapse of UMMs, facilitates stable cross-task continual learning and retains fine-grained image details.&lt;/div&gt;
             &lt;/div&gt;
 
+            
+
+            
             
         &lt;/div&gt;
     &lt;/div&gt;

@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.154.3</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 20 Mar 2026 11:56:53 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 21 Mar 2026 21:22:54 +0800</lastBuildDate>
     <atom:link href="https://milknocandy.github.io/tags/spatial-intelligence/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Spatial Intelligence in Large Models: Benchmarks, Mechanisms, and Reasoning</title>
@@ -106,6 +106,9 @@
                 &lt;div class=&#34;ex-text&#34;&gt;&lt;b&gt;Results:&lt;/b&gt; Best model 59.46% vs. 74.42% human; large gap in global tasks (&lt;10% mapping). CoT significantly improves performance, validating latent but underutilized spatial reasoning.&lt;/div&gt;
             &lt;/div&gt;
 
+            
+
+            
             
         &lt;/div&gt;
     &lt;/div&gt;

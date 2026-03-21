@@ -103,7 +103,7 @@
                     &lt;div class=&#34;ex-markdown-inner&#34;&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Noisy Query Tokens:&lt;/strong&gt; Sample tokens from the standard normal distribution $N(0, I)$ at each training step to learn a robust distributed intermediate representation space instead of task-specific features.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Probabilistic Expert Bridge:&lt;/strong&gt; Freeze VLM core parameters, add a parallel generative pathway, follow the division of labor (VLM for understanding, Diffusion Model for generation), and use Position MLP for feature alignment and spatial cue injection.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;VAE Branch:&lt;/strong&gt; Inject VAE fine-grained features into VLM via a linear projection layer to fuse high-level semantics ans low-level visual details, reducing the Diffusion Models&amp;rsquo;s burden.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VAE Branch:&lt;/strong&gt; Inject VAE fine-grained features into VLM via a linear projection layer to fuse high-level semantics ans low-level visual details, reducing the Diffusion Models&#39;s burden.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Progressive Training:&lt;/strong&gt; Adopt a four-stage curriculum training strategy, flexibly switch between contrastive/conditional flow matching loss, and gradually upgrade resolution and task complexity.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -114,6 +114,9 @@
                 &lt;div class=&#34;ex-text&#34;&gt;&lt;b&gt;Results:&lt;/b&gt; Though the performace is not SOTA, it alleviates task generalization collapse of UMMs, facilitates stable cross-task continual learning and retains fine-grained image details.&lt;/div&gt;
             &lt;/div&gt;
 
+            
+
+            
             
         &lt;/div&gt;
     &lt;/div&gt;
