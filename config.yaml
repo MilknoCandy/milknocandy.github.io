@@ -168,6 +168,9 @@ markup:
     renderer:
       unsafe: true
     extensions:
+    # disable typographer to prevent wrong translation of some characters, e.g. "..." to "…"
+      typographer:
+        disable: true
       passthrough:
         enable: true
         delimiters:

@@ -358,3 +358,50 @@
     text-decoration-thickness: 1px;
     text-underline-offset: 2px;
 }
+
+/* 思考部分样式 */
+.ex-extra-thought {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: rgba(255, 235, 59, 0.08);
+    border-left: 3px solid #ffeb3b;
+    border-radius: 4px;
+}
+
+.ex-thought-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #c8a800;
+    margin-bottom: 4px;
+}
+
+.ex-extra-thought p,
+.ex-extra-thought li,
+.ex-extra-thought ul,
+.ex-extra-thought ol {
+    font-size: 0.88rem !important;
+    line-height: 1.35;
+    color: var(--primary);
+    margin: 2px 0;
+}
+
+.dark .ex-extra-thought {
+    background: rgba(255, 235, 59, 0.05);
+    border-left-color: #ffd54f;
+}
+
+.dark .ex-thought-label {
+    color: #ffd54f;
+}
+
+/* 图片部分样式 */
+.ex-extra-image {
+    margin-top: 8px;
+}
+
+.ex-extra-image img {
+    max-width: 100%;
+    border-radius: 4px;
+}
