@@ -27,7 +27,7 @@ body {
     display: block;
     text-align: center;
     margin-top: 10px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     /* 稍微调小字号 */
     color: #888;
     /* 灰色显示 */
@@ -314,7 +314,149 @@ mark {
     position: relative;
 }
 
-.katex-display > .katex > .katex-html > .tag {
+.katex-display>.katex>.katex-html>.tag {
     position: sticky;
     right: 0;
+}
+
+/* ============================================================
+   paperbox — 论文导读卡（学术风）
+   ============================================================ */
+.paperbox {
+    margin: 1.5rem 0 2rem;
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--primary);
+    border-radius: 0;
+    background: transparent;
+    padding: 0;
+    overflow: hidden;
+}
+
+.pb-item {
+    display: grid;
+    grid-template-columns: 88px 1px 1fr;
+    align-items: stretch;
+    border-bottom: 1px solid var(--border);
+}
+
+.pb-item:last-child {
+    border-bottom: none;
+}
+
+.pb-key {
+    padding: 9px 12px;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    background: var(--code-bg);
+}
+
+.pb-sep {
+    background: var(--border);
+    width: 1px;
+}
+
+.pb-val {
+    padding: 9px 14px;
+    font-size: 0.875rem;
+    line-height: 1.65;
+    color: var(--primary);
+}
+
+.pb-val p {
+    margin: 0;
+}
+
+.pb-free {
+    grid-template-columns: 1fr;
+    padding: 10px 14px;
+    font-size: 0.875rem;
+    line-height: 1.65;
+    color: var(--primary);
+}
+
+.pb-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 14px;
+    border-top: 1px solid var(--border);
+    background: var(--code-bg);
+    gap: 12px;
+}
+
+.pb-org {
+    font-size: 0.72rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--secondary);
+    opacity: 0.75;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pb-link-group {
+    display: flex;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
+.pb-link {
+    font-size: 0.72rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--secondary);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+}
+
+.pb-link:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* Full-width table */
+.post-content table {
+    display: table;
+    width: 100%;
+}
+
+/* Three-line table */
+.post-content table {
+    border-top: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+    border-collapse: collapse;
+}
+
+.post-content table th,
+.post-content table:not(.highlighttable, .highlight table, .gist .highlight) td {
+    border-bottom: none;
+    border-top: none;
+}
+
+.post-content thead tr {
+    border-bottom: 1px solid var(--primary);
+}
+
+/* Table caption: same style as .auto-fig-title */
+.post-content table caption {
+    caption-side: top;
+    text-align: center;
+    margin-bottom: 6px;
+    font-size: 1rem;
+    color: #888;
+    font-weight: normal;
+}
+
+/* Table font size control */
+.post-content table {
+    font-size: var(--table-font-size, 0.9rem);
 }

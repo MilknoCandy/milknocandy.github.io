@@ -12,7 +12,7 @@ draft: false
 hidemeta: false
 comments: false
 # description: "Desc Text."
-canonicalURL: "https://canonical.url/to/page"
+# canonicalURL: "https://canonical.url/to/page"
 # disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
@@ -32,7 +32,7 @@ cover:
     relative: false # when using page bundles set this to true
     hidden: true # only hide on current single page
 editPost:
-    URL: "https://github.com/MilknoCandy/milknocandy.github.io/tree/main/content"
+    URL: "https://github.com/MilknoCandy/milknocandy.github.io/tree/src-code/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
@@ -101,3 +101,27 @@ editPost:
 ![Samples of SpatialGenEval. T2I Generation $\rightarrow$ MLLMs as a judge evaluation.](2_Sample4SpatialGenEval.png)
 {{< /paper >}}
 ![Comparisons between SpatialGenEval and previous T2I Benchmarks. 'L' and 'S' denote long and short prompt.](2_SpatialGeneval.png)
+
+### 1.3 Video-based Benchmarks
+
+{{< paper 
+    venue="Arxiv 2025" 
+    title="QuantiPhy: A Quantitative Benchmark Evaluating Physical Reasoning Abilities of Vision-Language Models"
+    paper="https://arxiv.org/abs/2512.19526"
+    author="https://github.com/Paulineli"
+    org="Stanford University, UST"
+    code="https://github.com/Paulineli/QuantiPhy"
+    demo="https://quantiphy.stanford.edu/"
+    subject="Quantitative Kinematic Benchmark for VLMs Physical Reasoning Evaluation"
+    idea="Cast physical reasoning as <mark>prior-conditioned kinematic</mark> scaling with numerical error calibration."
+    result="Best VLM achieves 53.1 MRA vs. human 55.6; counterfactual drops (70–80%) reveal failure in input-faithful quantitative reasoning and reliance on memorized priors."
+>}}
+- **Qualitative Evaluation Bias:** current Benchmark for VQA-style; lacks numerical precision sensitivity.
+- **Missing Kinematic Quantification:** no explicit size/velocity/acceleration inference.
+===
+- **QuantiPhy Benchmark:** 3.3K video–text pairs; numeric GT for kinematics.
+- **Kinematic Inference Task:** single prior → infer remaining quantities via scaling
+- **MRA Metric:** multi-threshold relative error aggregation.
+- **Diagnostic Probing Suite:** prior-only, counterfactual, CoT analyses.
+{{< /paper >}}
+![Examples from QuantiPhy Benchmark](3_QuantiPhy.png)

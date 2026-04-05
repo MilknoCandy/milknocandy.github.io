@@ -1,0 +1,47 @@
+{{- $topic := .Get "topic" -}}
+{{- $why := .Get "why" -}}
+{{- $conclusion := .Get "conclusion" -}}
+{{- $paper := .Get "paper" -}}
+{{- $code := .Get "code" -}}
+{{- $project := .Get "project" -}}
+{{- $author := .Get "author" -}}
+{{- $org := .Get "org" -}}
+<div class="paperbox">
+    {{- with $topic }}
+    <div class="pb-item">
+        <span class="pb-key">TOPIC</span>
+        <span class="pb-sep"></span>
+        <span class="pb-val">{{ . | safeHTML }}</span>
+    </div>
+    {{- end }}
+    {{- with $why }}
+    <div class="pb-item">
+        <span class="pb-key">WHY READ</span>
+        <span class="pb-sep"></span>
+        <span class="pb-val">{{ . | safeHTML }}</span>
+    </div>
+    {{- end }}
+    {{- with $conclusion }}
+    <div class="pb-item">
+        <span class="pb-key">TAKEAWAY</span>
+        <span class="pb-sep"></span>
+        <span class="pb-val">{{ . | safeHTML }}</span>
+    </div>
+    {{- end }}
+    {{- if not (or $topic $why $conclusion) }}
+    <div class="pb-item pb-free">{{ .Inner | markdownify }}</div>
+    {{- end }}
+    {{- if or $org $paper $code $project $author }}
+    <div class="pb-links">
+        {{- with $org }}
+        <span class="pb-org">{{ . | safeHTML }}</span>
+        {{- end }}
+        <div class="pb-link-group">
+            {{- with $paper }}<a href="{{ . | safeURL }}" target="_blank" class="pb-link">📄 Paper</a>{{- end }}
+            {{- with $code }}<a href="{{ . | safeURL }}" target="_blank" class="pb-link">💻 Code</a>{{- end }}
+            {{- with $project }}<a href="{{ . | safeURL }}" target="_blank" class="pb-link">🌐 Project</a>{{- end }}
+            {{- with $author }}<a href="{{ . | safeURL }}" target="_blank" class="pb-link">👤 Author</a>{{- end }}
+        </div>
+    </div>
+    {{- end }}
+</div>
