@@ -11,8 +11,40 @@
     </image>
     <generator>Hugo -- 0.154.3</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 21 Mar 2026 21:22:54 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 05 Apr 2026 17:58:05 +0800</lastBuildDate>
     <atom:link href="https://milknocandy.github.io/tags/spatial-intelligence/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>When VLMs Become Cognitive Mimics, Not Physical Reasoners: A QuantiPhy Study</title>
+      <link>https://milknocandy.github.io/posts/2026-03-23-quantiphy/</link>
+      <pubDate>Mon, 23 Mar 2026 16:42:46 +0800</pubDate>
+      <guid>https://milknocandy.github.io/posts/2026-03-23-quantiphy/</guid>
+      <description>&lt;div class=&#34;paperbox&#34;&gt;
+    &lt;div class=&#34;pb-item&#34;&gt;
+        &lt;span class=&#34;pb-key&#34;&gt;TOPIC&lt;/span&gt;
+        &lt;span class=&#34;pb-sep&#34;&gt;&lt;/span&gt;
+        &lt;span class=&#34;pb-val&#34;&gt;Quantitative Physical Understanding&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;pb-item&#34;&gt;
+        &lt;span class=&#34;pb-key&#34;&gt;WHY READ&lt;/span&gt;
+        &lt;span class=&#34;pb-sep&#34;&gt;&lt;/span&gt;
+        &lt;span class=&#34;pb-val&#34;&gt;Exposes that top VLMs guess physical quantities from memory (pre-trained world knowledge) rather than measure from video, with rigorous tests to diagnose this failure.&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;pb-item&#34;&gt;
+        &lt;span class=&#34;pb-key&#34;&gt;TAKEAWAY&lt;/span&gt;
+        &lt;span class=&#34;pb-sep&#34;&gt;&lt;/span&gt;
+        &lt;span class=&#34;pb-val&#34;&gt;Current VLMs are cognitive mimics not physical reasoners, so build systems that arbitrate between perception and memory rather than forcing pure end to end inference. (Context Learning, Agentic AI)&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;pb-links&#34;&gt;
+        &lt;span class=&#34;pb-org&#34;&gt;Stanford University, UST&lt;/span&gt;
+        &lt;div class=&#34;pb-link-group&#34;&gt;&lt;a href=&#34;https://arxiv.org/abs/2512.19526&#34; target=&#34;_blank&#34; class=&#34;pb-link&#34;&gt;📄 Paper&lt;/a&gt;&lt;a href=&#34;https://github.com/Paulineli/QuantiPhy&#34; target=&#34;_blank&#34; class=&#34;pb-link&#34;&gt;💻 Code&lt;/a&gt;&lt;a href=&#34;https://github.com/Paulineli/QuantiPhy&#34; target=&#34;_blank&#34; class=&#34;pb-link&#34;&gt;🌐 Project&lt;/a&gt;&lt;a href=&#34;https://github.com/Paulineli&#34; target=&#34;_blank&#34; class=&#34;pb-link&#34;&gt;👤 Author&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;-1-motivation--problem&#34;&gt;🚀 1 Motivation &amp;amp; Problem&lt;/h2&gt;
+&lt;p&gt;Humans understand the physical world through structured mathematical abstractions. From Isaac Newton’s formulation of universal gravitation inspired by a falling apple, to modern physics, quantitative laws enable precise reasoning about the dynamics of the real world. In contrast, although state-of-the-art AI systems demonstrate remarkable capabilities in mathematical reasoning, programming, and scientific writing, enabling artificial intelligence to &lt;u&gt;&lt;i&gt;ground its understanding in the physical world&lt;/i&gt;&lt;/u&gt; remains a fundamental and unresolved challenge. This limitation poses a critical barrier to deploying AI systems in real-world, embodied environments.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Spatial Intelligence in Large Models: Benchmarks, Mechanisms, and Reasoning</title>
       <link>https://milknocandy.github.io/posts/2026-03-19-si/</link>
