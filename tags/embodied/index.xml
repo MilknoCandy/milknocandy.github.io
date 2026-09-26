@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Embodied on PaperMoon&#39;s blog</title>
-    <link>http://localhost:1313/tags/embodied/</link>
+    <link>https://milknocandy.github.io/tags/embodied/</link>
     <description>Recent content in Embodied on PaperMoon&#39;s blog</description>
     <image>
       <title>PaperMoon&#39;s blog</title>
-      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://milknocandy.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://milknocandy.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.154.3</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 26 Sep 2026 17:32:56 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/embodied/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Sep 2026 17:39:12 +0800</lastBuildDate>
+    <atom:link href="https://milknocandy.github.io/tags/embodied/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reinforcement Learning algorithm for Vision-Language-Action Models</title>
-      <link>http://localhost:1313/posts/2026-09-26-vla_rl/</link>
+      <link>https://milknocandy.github.io/posts/2026-09-26-vla_rl/</link>
       <pubDate>Sat, 26 Sep 2026 17:17:49 +0800</pubDate>
-      <guid>http://localhost:1313/posts/2026-09-26-vla_rl/</guid>
+      <guid>https://milknocandy.github.io/posts/2026-09-26-vla_rl/</guid>
       <description>&lt;h2 id=&#34;1-timeline-order&#34;&gt;1 Timeline Order&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Summarize the literature reviewed in chronological order.&lt;/p&gt;
@@ -37,16 +37,16 @@
             
             
 
-            &lt;span class=&#34;s-venue-dynamic v-corl-2026&#34;&gt;
+            &lt;span class=&#34;s-venue-dynamic v-arxiv-2026&#34;&gt;
                 &lt;svg viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34;
                 stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; class=&#34;v-icon&#34;&gt;
-                &lt;path d=&#34;M2 3h6a4 4 0 0 1 4 4v14a4 4 0 0 0-4-4H2z&#34;&gt;&lt;/path&gt;
-                &lt;path d=&#34;M22 3h-6a4 4 0 0 0-4 4v14a4 4 0 0 1 4-4h6z&#34;&gt;&lt;/path&gt;
+                &lt;path d=&#34;M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z&#34;&gt;&lt;/path&gt;
+                &lt;polyline points=&#34;14 2 14 8 20 8&#34;&gt;&lt;/polyline&gt;
             &lt;/svg&gt;
-                &lt;span class=&#34;v-text&#34;&gt;CoRL 2026&lt;/span&gt;
+                &lt;span class=&#34;v-text&#34;&gt;Arxiv 2026&lt;/span&gt;
             &lt;/span&gt;
 
-            &lt;p class=&#34;s-title&#34;&gt;EXPO-FT: Sample-Efficient Reinforcement Learning Finetuning for Vision-Language-Action Models&lt;/p&gt;
+            &lt;p class=&#34;s-title&#34;&gt;RL Token: Bootstrapping Online RL with Vision-Language-Action Models&lt;/p&gt;
             &lt;span class=&#34;s-toggle-icon&#34;&gt;🔻&lt;/span&gt;
         &lt;/div&gt;
     &lt;/summary&gt;
@@ -59,7 +59,7 @@
                     
                     
                       &lt;span class=&#34;org-tag&#34;&gt;🏛️
-                        Stanford University&lt;/span&gt;
+                        Physical Intelligence&lt;/span&gt;
                     
                     
                 &lt;/div&gt;
@@ -67,21 +67,21 @@
             &lt;/div&gt;
 
             &lt;div class=&#34;action-btns-fixed&#34;&gt;
-                &lt;a href=&#34;https://pd-perry.github.io/&#34; target=&#34;_blank&#34; class=&#34;act-btn&#34;&gt;👤 Author&lt;/a&gt;
-                &lt;a href=&#34;https://arxiv.org/abs/2605.25477&#34; target=&#34;_blank&#34; class=&#34;act-btn&#34;&gt;📄 Paper&lt;/a&gt;
-                &lt;a href=&#34;https://github.com/pd-perry/expo-ft&#34; target=&#34;_blank&#34; class=&#34;act-btn&#34;&gt;💻 Code&lt;/a&gt;
-                &lt;a href=&#34;https://pd-perry.github.io/expo-ft/&#34; target=&#34;_blank&#34; class=&#34;act-btn&#34;&gt;🚀 Demo&lt;/a&gt;
+                &lt;a href=&#34;Charles%20Xu,%20Jost%20Tobias%20Springenberg,%20Michael%20Equi,%20Ali%20Amin,%20Adnan%20Esmail,%20Sergey%20Levine,%20Liyiming%20Ke&#34; target=&#34;_blank&#34; class=&#34;act-btn&#34;&gt;👤 Author&lt;/a&gt;
+                &lt;a href=&#34;https://arxiv.org/abs/2604.23073&#34; target=&#34;_blank&#34; class=&#34;act-btn&#34;&gt;📄 Paper&lt;/a&gt;
+                
+                &lt;a href=&#34;https://www.pi.website/research/rlt&#34; target=&#34;_blank&#34; class=&#34;act-btn&#34;&gt;🚀 Demo&lt;/a&gt;
             &lt;/div&gt;
         &lt;/div&gt;&lt;div class=&#34;expand-grid&#34;&gt;&lt;div class=&#34;ex-row&#34;&gt;&lt;span class=&#34;ex-icon&#34;&gt;🏷️&lt;/span&gt;
-                &lt;div class=&#34;ex-text&#34;&gt;&lt;b&gt;Subject:&lt;/b&gt; Sample-efficient RL Finetuning of Vision-Language-Action Models&lt;/div&gt;
+                &lt;div class=&#34;ex-text&#34;&gt;&lt;b&gt;Subject:&lt;/b&gt; Efficient Online RL with Vision-Language-Action Models&lt;/div&gt;
             &lt;/div&gt;
             &lt;div class=&#34;ex-row&#34;&gt;&lt;span class=&#34;ex-icon&#34;&gt;❓&lt;/span&gt;
                 &lt;div class=&#34;ex-text&#34;&gt;&lt;b&gt;Problem:&lt;/b&gt;
-                    &lt;div class=&#34;ex-markdown-inner&#34;&gt; Existing VLA RL methods either train separate lightweight policies without directly finetuning the pretrained VLA, or require substantial online interaction. EXPO-FT builds on EXPO to directly finetune pretrained VLAs while preserving their strong behavioral priors and exploiting their native action-chunk interface.&lt;/div&gt;
+                    &lt;div class=&#34;ex-markdown-inner&#34;&gt; Existing approaches either train large VLAs directly with RL, which is computationally expensive, or &lt;mark&gt;train separate policies that cannot efficiently access the rich knowledge encoded in pretrained VLA representations&lt;/mark&gt;. RLT introduces a compact RL token as an efficient interface between the frozen VLA and online RL.&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;div class=&#34;ex-row&#34;&gt;&lt;span class=&#34;ex-icon&#34;&gt;💡&lt;/span&gt;
-                &lt;div class=&#34;ex-text&#34;&gt;&lt;b&gt;Idea:&lt;/b&gt; Extend EXPO to pretrained VLA models by combining a lightweight action-editing policy, Q-guided selection, temporally extended action chunks, and human-in-the-loop feedback.&lt;/div&gt;
+                &lt;div class=&#34;ex-text&#34;&gt;&lt;b&gt;Idea:&lt;/b&gt; Expose a compact RL token from a pretrained VLA and use a lightweight actor-critic to refine its actions while anchoring the learned policy to the original VLA behavior.&lt;/div&gt;
             &lt;/div&gt;
 
             &lt;div class=&#34;ex-row ex-sol-box&#34;&gt;
@@ -89,18 +89,18 @@
                 &lt;div class=&#34;ex-text&#34;&gt;
                     &lt;b&gt;Solution:&lt;/b&gt;
                     &lt;div class=&#34;ex-markdown-inner&#34;&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Action Edit Policy:&lt;/strong&gt; Keep the pretrained VLA as a strong base policy and train a lightweight edit policy to predict an action correction $\hat{a}$, producing the final action $\tilde{a}=a+\hat{a}$. This allows RL to search locally around the VLA&#39;s pretrained behavior rather than relearning the policy from scratch.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Q-guided Action Selection:&lt;/strong&gt; Train a Q-function to evaluate both the original VLA action and edited actions, then select the candidate with the highest estimated value. This provides a direct mechanism for preserving the pretrained action when an RL edit is not beneficial.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Temporally Extended Actions:&lt;/strong&gt; Extend EXPO from single-step actions to the action chunks naturally produced by modern VLAs. Both the edit policy and Q-function operate over executed action chunks, preserving the temporal abstraction of the VLA.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Human-in-the-loop Feedback:&lt;/strong&gt; Allow human operators to intervene during online training and provide corrective actions when autonomous exploration is insufficient, improving data efficiency and reliability.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Direct VLA Finetuning:&lt;/strong&gt; Unlike methods that only train an auxiliary policy on top of a frozen VLA, EXPO-FT incorporates RL into the VLA finetuning pipeline while retaining the original supervised VLA objective.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RL Token:&lt;/strong&gt; Adapt the pretrained VLA to expose a compact task-relevant representation $z_{RL}$ that preserves useful pretrained knowledge while providing an efficient state interface for online RL.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lightweight Actor-Critic:&lt;/strong&gt; Freeze the Stage-1 VLA representation model and train a small actor-critic on the RL token, proprioceptive state, and VLA reference action chunk.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reference-action Conditioning:&lt;/strong&gt; Use the VLA-generated action chunk as an explicit behavioral prior. The RL actor refines the VLA action instead of learning the complete manipulation behavior from scratch.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Behavioral Anchoring:&lt;/strong&gt; Combine Q-driven optimization with a BC/reference-action objective so that the learned policy remains close to the pretrained VLA behavior when RL does not provide sufficient evidence for deviation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Chunk-level RL:&lt;/strong&gt; Operate the actor and critic on temporally extended action chunks, reducing the effective RL decision horizon and making online learning more sample efficient.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
 
             &lt;div class=&#34;ex-row&#34;&gt;&lt;span class=&#34;ex-icon&#34;&gt;🏆&lt;/span&gt;
-                &lt;div class=&#34;ex-text&#34;&gt;&lt;b&gt;Results:&lt;/b&gt; Achieves 30/30 successes across the evaluated real-world manipulation tasks using an average of about 19.1 minutes of online robot data.&lt;/div&gt;
+                &lt;div class=&#34;ex-text&#34;&gt;&lt;b&gt;Results:&lt;/b&gt; Enables efficient online RL finetuning of pretrained VLAs, improving manipulation speed and success rates within minutes to a few hours of real-world practice.&lt;/div&gt;
             &lt;/div&gt;
 
             
@@ -112,8 +112,8 @@
 &lt;/details&gt;
 
 &lt;figure &gt;
-    &lt;img src=&#34;1_EXPO-FT.png&#34; alt=&#34;EXPO-FT&#34; /&gt;&lt;figcaption&gt;
-        &lt;span class=&#34;auto-fig-title&#34;&gt;EXPO-FT&lt;/span&gt;
+    &lt;img src=&#34;3_RLT.png&#34; alt=&#34;RLT&#34; /&gt;&lt;figcaption&gt;
+        &lt;span class=&#34;auto-fig-title&#34;&gt;RLT&lt;/span&gt;
     &lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;</description>
     </item>
   </channel>
