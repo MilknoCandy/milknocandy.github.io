@@ -11,8 +11,122 @@
     </image>
     <generator>Hugo -- 0.154.3</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 05 Apr 2026 17:58:05 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2026 17:23:54 +0800</lastBuildDate>
     <atom:link href="https://milknocandy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reinforcement Learning algorithm for Vision-Language-Action Models</title>
+      <link>https://milknocandy.github.io/posts/2026-09-26-vla_rl/</link>
+      <pubDate>Sat, 26 Sep 2026 17:17:49 +0800</pubDate>
+      <guid>https://milknocandy.github.io/posts/2026-09-26-vla_rl/</guid>
+      <description>&lt;h2 id=&#34;1-timeline-order&#34;&gt;1 Timeline Order&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Summarize the literature reviewed in chronological order.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;2026&#34;&gt;2026&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;2025&#34;&gt;2025&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;details class=&#34;paper-details-wrapper&#34;&gt;
+    &lt;summary class=&#34;paper-summary&#34;&gt;
+        &lt;div class=&#34;summary-inner&#34;&gt;
+            
+
+            
+            
+            
+            
+
+            &lt;span class=&#34;s-venue-dynamic v-corl-2025&#34;&gt;
+                &lt;svg viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34;
+                stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; class=&#34;v-icon&#34;&gt;
+                &lt;path d=&#34;M2 3h6a4 4 0 0 1 4 4v14a4 4 0 0 0-4-4H2z&#34;&gt;&lt;/path&gt;
+                &lt;path d=&#34;M22 3h-6a4 4 0 0 0-4 4v14a4 4 0 0 1 4-4h6z&#34;&gt;&lt;/path&gt;
+            &lt;/svg&gt;
+                &lt;span class=&#34;v-text&#34;&gt;CoRL 2025&lt;/span&gt;
+            &lt;/span&gt;
+
+            &lt;p class=&#34;s-title&#34;&gt;Steering Your Diffusion Policy with Latent Space Reinforcement Learning&lt;/p&gt;
+            &lt;span class=&#34;s-toggle-icon&#34;&gt;🔻&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/summary&gt;
+
+    &lt;div class=&#34;paper-card-expanded&#34;&gt;
+        &lt;div class=&#34;expand-action-bar&#34;&gt;
+            &lt;div class=&#34;org-outer-container&#34;&gt;
+                
+                &lt;div class=&#34;org-group&#34;&gt;
+                    
+                    
+                      &lt;span class=&#34;org-tag&#34;&gt;🏛️
+                        UC Berkeley&lt;/span&gt;
+                    
+                    
+                      &lt;span class=&#34;org-tag&#34;&gt;🏛️
+                        University of Washington&lt;/span&gt;
+                    
+                    
+                      &lt;span class=&#34;org-tag&#34;&gt;🏛️
+                        Amazon&lt;/span&gt;
+                    
+                    
+                &lt;/div&gt;
+                
+            &lt;/div&gt;
+
+            &lt;div class=&#34;action-btns-fixed&#34;&gt;
+                
+                &lt;a href=&#34;https://proceedings.mlr.press/v305/wagenmaker25a.html&#34; target=&#34;_blank&#34; class=&#34;act-btn&#34;&gt;📄 Paper&lt;/a&gt;
+                &lt;a href=&#34;https://github.com/ajwagen/dsrl&#34; target=&#34;_blank&#34; class=&#34;act-btn&#34;&gt;💻 Code&lt;/a&gt;
+                
+            &lt;/div&gt;
+        &lt;/div&gt;&lt;div class=&#34;expand-grid&#34;&gt;&lt;div class=&#34;ex-row&#34;&gt;&lt;span class=&#34;ex-icon&#34;&gt;🏷️&lt;/span&gt;
+                &lt;div class=&#34;ex-text&#34;&gt;&lt;b&gt;Subject:&lt;/b&gt; Latent-space Reinforcement Learning for Diffusion Policies&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;ex-row&#34;&gt;&lt;span class=&#34;ex-icon&#34;&gt;❓&lt;/span&gt;
+                &lt;div class=&#34;ex-text&#34;&gt;&lt;b&gt;Problem:&lt;/b&gt;
+                    &lt;div class=&#34;ex-markdown-inner&#34;&gt; Existing methods &lt;mark&gt;directly finetune diffusion policies with RL&lt;/mark&gt;, which is computationally expensive and can disturb the pretrained behavior prior. DSRL instead keeps the diffusion policy frozen and performs RL in its latent-noise space.&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;ex-row&#34;&gt;&lt;span class=&#34;ex-icon&#34;&gt;💡&lt;/span&gt;
+                &lt;div class=&#34;ex-text&#34;&gt;&lt;b&gt;Idea:&lt;/b&gt; Steer a frozen diffusion/flow policy by learning a policy over its latent-noise space instead of directly finetuning the base policy.&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&#34;ex-row ex-sol-box&#34;&gt;
+                &lt;span class=&#34;ex-icon&#34;&gt;🛠️&lt;/span&gt;
+                &lt;div class=&#34;ex-text&#34;&gt;
+                    &lt;b&gt;Solution:&lt;/b&gt;
+                    &lt;div class=&#34;ex-markdown-inner&#34;&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Latent-space Steering:&lt;/strong&gt; Keep the pretrained diffusion/flow policy frozen and learn an RL policy that modifies the initial latent noise used by the denoising process. The resulting noise is passed through the original policy to generate the action chunk.&lt;/li&gt;
+&lt;li&gt;*&lt;strong&gt;lack-box Policy Access:&lt;/strong&gt; The pretrained policy does not need to expose or update its internal parameters. RL only interacts with the policy through its input/output interface, making the adaptation lightweight.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action-space Critic:&lt;/strong&gt; DSRL can evaluate the resulting actions using a Q-function in action space and transfer the learned value information back to the latent-noise policy. The released implementation includes DSRL-SAC and DSRL-NA variants.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Policy Prior Preservation:&lt;/strong&gt; Since the diffusion/flow policy parameters remain fixed, RL exploration remains constrained by the behavior distribution represented by the pretrained policy.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Chunk-level Control:&lt;/strong&gt; One latent sample generates a temporally extended action sequence, reducing the effective decision frequency and improving the efficiency of online RL.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&#34;ex-row&#34;&gt;&lt;span class=&#34;ex-icon&#34;&gt;🏆&lt;/span&gt;
+                &lt;div class=&#34;ex-text&#34;&gt;&lt;b&gt;Results:&lt;/b&gt; Achieves sample-efficient autonomous policy improvement on simulated and real-world robotic tasks while requiring only black-box access to the pretrained policy.&lt;/div&gt;
+            &lt;/div&gt;
+
+            
+
+            
+            
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;figure &gt;
+    &lt;img src=&#34;1_DSRL.png&#34; alt=&#34;DSRL&#34; /&gt;&lt;figcaption&gt;
+        &lt;span class=&#34;auto-fig-title&#34;&gt;DSRL&lt;/span&gt;
+    &lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>When VLMs Become Cognitive Mimics, Not Physical Reasoners: A QuantiPhy Study</title>
       <link>https://milknocandy.github.io/posts/2026-03-23-quantiphy/</link>
